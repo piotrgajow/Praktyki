@@ -1,8 +1,27 @@
-#include <QCoreApplication>
+#define CATCH_CONFIG_MAIN
+#include "Tester_Catch.h"
+#include "../GameOfLife/savetofile.h"
+#include <QTextStream>
 
-int main(int argc, char *argv[])
+TEST_CASE("Test If Savetofile creates readable file", "file")
 {
-    QCoreApplication a(argc, argv);
+    SaveTofile saver( "filename.txt" ,"Random text");
+    QFile file("filename.txt");
 
-    return a.exec();
+    REQUIRE(file.open(QIODevice::ReadOnly | QIODevice::Text) == 1);
+    file.remove();
+
+}
+
+TEST_CASE("Test If Savetofile creates file with Random text", "file")
+{
+    QString txt;
+    SaveTofile saver1( "test2.txt" ,"Random text");
+    QFile file("test2.txt");
+    file.open(QIODevice::ReadOnly | QIODevice::Text);
+    QTextStream stream(&file);
+    txt = stream.readAll();
+    file.close();
+    REQUIRE(txt == "Random text");
+    file.remove();
 }
