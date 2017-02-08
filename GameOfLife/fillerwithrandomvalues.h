@@ -1,11 +1,15 @@
-#ifndef FILLERWITHRANDOMVALUES_H
-#define FILLERWITHRANDOMVALUES_H
+#ifndef FILLERRANDOMVALUES_H
+#define FILLERRANDOMVALUES_H
+#include "filler.h"
+#include <ctime>
+#include <cstdlib>
+#include <vector>
 
-
-class FillerWithRandomValues
+class FillerWithRandomValues : public virtual Filler
 {
 public:
     FillerWithRandomValues();
+    std::vector<std::vector<bool>> fillBoardWithRandomBoolValues( std::vector<std::vector<bool>> theBoard);
 };
 
-#endif // FILLERWITHRANDOMVALUES_H
+#endif // FILLERRANDOMVALUES_H
