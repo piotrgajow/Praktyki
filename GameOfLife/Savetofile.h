@@ -11,8 +11,6 @@ public:
     SaveTofile();
     SaveTofile(QString,QString);
 
-    ~SaveTofile();
-
 };
 
 #endif // SAVETOFILE_H

@@ -11,4 +11,6 @@ SaveTofile::SaveTofile(QString fileName, QString text)
         stream << text;
         plik.close();
 
+
 }
+
