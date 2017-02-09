@@ -6,7 +6,7 @@ class DisplayGameBoardOnTheCommandLine
 {
 public:
     DisplayGameBoardOnTheCommandLine();
-    void displayGameBoardOnTheCommandLine(std::vector <std::vector <char>> convertedTable);
+    void displayGameBoardOnTheCommandLine(std::string stringConvertedFromBoard);
 };
 
 #endif // DISPLAYGAMEBOARDONTHECOMMANDLINE_H
