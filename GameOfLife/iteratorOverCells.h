@@ -6,7 +6,7 @@ class IteratorOverCells
 {
 public:
     IteratorOverCells();
-    Board iterateOverAllCells(Board, Board oldBoard);
+    Board iterateOverAllCells(Board newBoard, Board oldBoard);
 };
 
 #endif // ITERATOR_H
