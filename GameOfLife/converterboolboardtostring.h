@@ -1,9 +1,9 @@
-#ifndef CONVERTERCHARBOARDTOSTRING_H
-#define CONVERTERCHARBOARDTOSTRING_H
+#ifndef CONVERTERBOOLBOARDTOSTRING_H
+#define CONVERTERBOOLBOARDTOSTRING_H
 #include <vector>
 #include <iostream>
 
-class ConverterCharBoardToString
+class ConverterBoolBoardToString
 {
 public:
 
@@ -14,4 +14,4 @@ private:
       std::string boardConvertToString;
 };
 
-#endif // CONVERTERCHARBOARDTOSTRING_H
+#endif // CONVERTERBOOLBOARDTOSTRING_H

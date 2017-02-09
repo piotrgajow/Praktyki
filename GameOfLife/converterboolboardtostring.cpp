@@ -1,7 +1,7 @@
 #include "converterboolboardtostring.h"
 
 
-std::string ConverterCharBoardToString::convertBoolBoardToString (std::vector<std::vector<bool>> theBoard)
+std::string ConverterBoolBoardToString::convertBoolBoardToString (std::vector<std::vector<bool>> theBoard)
 {
     for(std::size_t numberOfRow=1; numberOfRow<theBoard.size()-1; numberOfRow++)
     {
