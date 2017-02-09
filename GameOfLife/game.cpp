@@ -3,8 +3,8 @@
 Game::Game()
 {
 Board board;
-Filler filler;
-filler.FillerWithRandomValues::fillBoard(&board);
+FillerWithRandomValues filler;
+filler.fillBoard(&board);
 ConverterCharBoardToString converter;
 Converter.convertBoolBoardToString(board.theBoard);
 DisplayGameBoardOnTheCommandLine display;
