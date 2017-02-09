@@ -1,7 +1,7 @@
-#include "converterboolboardtostringboard.h"
+#include "converterboolboardtocharboard.h"
 
 
-std::vector<std::vector<char> > ConverterBoolBoardToStringBoard::converterBoolBoardToCharBoard(std::vector<std::vector<bool> > theBoard)
+std::vector<std::vector<char>> ConverterBoolBoardToCharBoard::convertBoolBoardToCharBoard(std::vector<std::vector<bool> > theBoard)
 {
     for(std::size_t numberOfRow=0; numberOfRow<theBoard.size(); numberOfRow++)
     {
