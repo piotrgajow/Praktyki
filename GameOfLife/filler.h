@@ -8,7 +8,7 @@ class Filler
 {
 public:
 Filler();
-void fillBoard(Board & board);
+virtual void fillBoard(Board & board)=0;
 
 
 protected:
