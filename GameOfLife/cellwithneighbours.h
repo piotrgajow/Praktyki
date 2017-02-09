@@ -1,7 +1,6 @@
 #ifndef CELLWITHNEIGHBOURS_H
 #define CELLWITHNEIGHBOURS_H
-
-
+#include "board.h"
 class CellWithNeighbours
 {
 private:
