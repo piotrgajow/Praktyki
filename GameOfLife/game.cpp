@@ -3,9 +3,11 @@
 Game::Game()
 {
 Board board;
-FillerWithRandomValues fillerwithrandomvalues(board.theBoard);
-Convert convert(board.theBoard);
-
-
+Filler filler;
+filler.FillerWithRandomValues::fillBoard(&board);
+ConverterCharBoardToString converter;
+Converter.convertBoolBoardToString(board.theBoard);
+DisplayGameBoardOnTheCommandLine display;
+display(convert.boardConvertToString);
 
 }
