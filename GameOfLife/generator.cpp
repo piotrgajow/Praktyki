@@ -10,7 +10,7 @@ Board Generator::generateNewBoard(Board oldBoard)
 {
     Board newBoard;
     FillerEmptyBoard empty;
-    empty.fillWithDeadCells(newBoard);
+    empty.fillBoard(newBoard);
     IteratorOverCells iterator;
     iterator.iterateOverAllCells(newBoard, oldBoard);
     return newBoard;
