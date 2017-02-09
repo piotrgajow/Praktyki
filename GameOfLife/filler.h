@@ -1,15 +1,19 @@
 #ifndef FILLER_H
 #define FILLER_H
 #include <vector>
-//#include "board.h"
-//#include "fillerwithrandomvalues.h"
+#include "board.h"
+
+
 class Filler
 {
 public:
- Filler();
- std::vector<std::vector<bool>> fillBoardWithRandomBoolValues( std::vector<std::vector<bool>> theBoard);
- std::vector<std::vector<bool>> fillWithDeadCells( std::vector<std::vector<bool>> DeadBoard);
+Filler();
+void fillBoardWithRandomBoolValues(Board & board);
+void fillWithDeadCells(Board & board);
 
+protected:
+ std::vector<std::vector<bool>> theBoard;
+ std::vector<std::vector<bool>> deadBoard;
 
 };
 

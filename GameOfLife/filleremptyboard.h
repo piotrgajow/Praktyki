@@ -6,8 +6,9 @@
 class FillerEmptyBoard:public virtual Filler
 {
 public:
-    FillerEmptyBoard();
-    std::vector<std::vector<bool>> fillWithDeadCells( std::vector<std::vector<bool>> DeadBoard);
+   FillerEmptyBoard();
+   void fillWithDeadCells(Board & board);
+
 };
 
 #endif // FILLEREMPTYBOARD_H

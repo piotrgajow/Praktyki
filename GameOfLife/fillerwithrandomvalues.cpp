@@ -4,16 +4,35 @@ FillerWithRandomValues::FillerWithRandomValues()
 {
 
 }
-std::vector<std::vector<bool>> FillerWithRandomValues::fillBoardWithRandomBoolValues( std::vector<std::vector<bool>> theBoard){
+void FillerWithRandomValues::fillBoardWithRandomBoolValues( Board & board){
     srand ( time(NULL) );
-    for (int numberOfRow=0; numberOfRow<theBoard.size(); numberOfRow++){
+    for (int row=0; row<numberOfRow; row++){
         std::vector<bool>rowVector;
-        for (int numberOfColumn=0; numberOfColumn<theBoard[numberOfRow].size(); numberOfColumn++)
+        for (int column=0; column<numberOfColumn; column++)
         {
-           rowVector.push_back(rand() % 2 == 1);
+           rowVector.push_back(0);
         }
         theBoard.push_back(rowVector);
         rowVector.clear();
     }
-    return theBoard;
+
+    for (int row=1; row<numberOfRow-1; row++){
+        for (int column=1; column<numberOfColumn-1; column++)
+        {
+            theBoard[row][column] = rand() % 2;
+        }
+    }
+    board.setStateOfBoard(theBoard);
+}
+
+
+void FillerWithRandomValues::show(Board board)
+{
+    for (int row=0; row<numberOfRow; row++){
+
+        for (int column=0; column<numberOfColumn; column++)
+        {
+            std::cout << board.getTheBoard()[row][column];
+        } std::cout << std::endl;
+    }
 }
