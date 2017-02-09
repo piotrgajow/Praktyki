@@ -7,7 +7,7 @@ class FillerEmptyBoard:public virtual Filler
 {
 public:
    FillerEmptyBoard();
-   void fillWithDeadCells(Board & board);
+   void fillBoard(Board & board);
 
 };
 

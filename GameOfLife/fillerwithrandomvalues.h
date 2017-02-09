@@ -10,7 +10,7 @@ class FillerWithRandomValues:public virtual Filler
 {
 public:
     FillerWithRandomValues();
-   void fillBoardWithRandomBoolValues( Board &board);
+   void fillBoard( Board &board);
    void show(Board board);
 
 };

@@ -4,7 +4,7 @@ FillerWithRandomValues::FillerWithRandomValues()
 {
 
 }
-void FillerWithRandomValues::fillBoardWithRandomBoolValues( Board & board){
+void FillerWithRandomValues::fillBoard( Board & board){
     srand ( time(NULL) );
     for (int row=0; row<numberOfRow; row++){
         std::vector<bool>rowVector;

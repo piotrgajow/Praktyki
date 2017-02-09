@@ -4,7 +4,7 @@ FillerEmptyBoard::FillerEmptyBoard()
 {
 
 }
-void FillerEmptyBoard::fillWithDeadCells(Board & board){
+void FillerEmptyBoard::fillBoard(Board & board){
     for (int row=0; row<numberOfRow; row++){
         std::vector<bool>rowVector;
         for (int column=0; column<numberOfColumn; column++)

@@ -5,9 +5,8 @@
 int main()
 {
     Board board;
-    //Filler fill;
     FillerWithRandomValues fillRand;
-    fillRand.fillBoardWithRandomBoolValues(board);
+    fillRand.fillBoard(board);
     fillRand.show(board);
     return 0;
 }

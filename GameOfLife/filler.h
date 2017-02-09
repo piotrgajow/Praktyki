@@ -8,8 +8,8 @@ class Filler
 {
 public:
 Filler();
-void fillBoardWithRandomBoolValues(Board & board);
-void fillWithDeadCells(Board & board);
+void fillBoard(Board & board);
+
 
 protected:
  std::vector<std::vector<bool>> theBoard;
