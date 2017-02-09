@@ -8,6 +8,6 @@ filler.FillerWithRandomValues::fillBoard(&board);
 ConverterCharBoardToString converter;
 Converter.convertBoolBoardToString(board.theBoard);
 DisplayGameBoardOnTheCommandLine display;
-display(convert.boardConvertToString);
+display(converter.boardConvertToString);
 
 }
