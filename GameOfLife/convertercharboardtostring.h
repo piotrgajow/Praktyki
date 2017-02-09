@@ -7,8 +7,10 @@ class ConverterCharBoardToString
 {
 public:
 
-      std::string convertCharBoardToString (std::vector<std::vector<char>> charBoard);
+      std::string convertBoolBoardToString (std::vector<std::vector<bool>> theBoard);
 private:
+
+      char deadCell='.', liveCell='x';
       std::string boardConvertToString;
 };
 

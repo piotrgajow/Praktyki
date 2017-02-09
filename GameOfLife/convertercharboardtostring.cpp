@@ -1,15 +1,22 @@
 #include "convertercharboardtostring.h"
 
 
-std::string ConverterCharBoardToString::convertCharBoardToString (std::vector<std::vector<char>> charBoard)
+std::string ConverterCharBoardToString::convertBoolBoardToString (std::vector<std::vector<bool>> theBoard)
 {
-    for(std::size_t numberOfRow=0; numberOfRow<charBoard.size(); numberOfRow++)
+    for(std::size_t numberOfRow=0; numberOfRow<theBoard.size(); numberOfRow++)
     {
-          for(std::size_t numberOfColumn=0; numberOfColumn<charBoard[numberOfRow].size(); numberOfColumn++)
+          for(std::size_t numberOfColumn=0; numberOfColumn<theBoard[numberOfRow].size(); numberOfColumn++)
           {
-              boardConvertToString=charBoard[numberOfRow][numberOfColumn];
+              if(theBoard[numberOfRow][numberOfColumn]== 0)
+              {
+
+                  boardConvertToString+=deadCell;
+              }
+              else
+              {
+                  boardConvertToString+=liveCell;
+              }
           }
     }
     return boardConvertToString;
 }
-

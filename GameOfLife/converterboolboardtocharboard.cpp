@@ -3,7 +3,7 @@
 
 std::vector<std::vector<char>> ConverterBoolBoardToCharBoard::convertBoolBoardToCharBoard(std::vector<std::vector<bool> > theBoard)
 {
-    char deadCell='.', liveCell='x';
+
     for(std::size_t numberOfRow=0; numberOfRow<theBoard.size(); numberOfRow++)
     {
         std::vector<char>temporaryVectorToCreateCharBoard;
