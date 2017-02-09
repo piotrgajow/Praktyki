@@ -7,7 +7,7 @@ IteratorOverCells::IteratorOverCells()
 
 Board IteratorOverCells::iterateOverAllCells(Board newBoard, Board oldBoard)
 {
-    cellPointer = new CellWithNeighbours;
+    CellWithNeighbours * cellPointer = new CellWithNeighbours;
     int neighboursCount;
     for (int numberOfRow = 1; numberOfRow < oldBoard.getTheBoard.size() -1;
          numberOfRow++){

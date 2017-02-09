@@ -1,6 +1,8 @@
 #ifndef ITERATOR_H
 #define ITERATOR_H
 #include "board.h"
+#include "filler.h"
+#include "cellwithneighbours.h"
 
 class IteratorOverCells
 {

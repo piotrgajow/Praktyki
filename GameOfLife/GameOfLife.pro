@@ -9,7 +9,7 @@ CONFIG -= app_bundle
 
 TEMPLATE = app
 
-SOURCES += main.cpp \
+SOURCES += \
     cellwithneighbours.cpp \
     generator.cpp \
     iteratorOverCells.cpp

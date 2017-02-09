@@ -1,6 +1,7 @@
 #ifndef GENERATOR_H
 #define GENERATOR_H
 #include "iteratorOverCells.h"
+#include "filler.h"
 
 class Generator
 {
