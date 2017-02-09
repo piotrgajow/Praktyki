@@ -2,12 +2,14 @@
 #define GENERATOR_H
 #include "iteratorOverCells.h"
 #include "filler.h"
+#include "board.h"
+
 
 class Generator
 {
 public:
     Generator();
-    Board generateNewBoard(Board oldBoard);
+    Board generateNextBoard(Board oldBoard);
 };
 
 #endif // GENERATOR_H
