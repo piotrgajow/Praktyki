@@ -12,3 +12,4 @@ std::string ConverterCharBoardToString::convertCharBoardToString (std::vector<st
     }
     return boardConvertToString;
 }
+

@@ -10,7 +10,7 @@ public:
 
     std::vector<std::vector<char>> convertBoolBoardToCharBoard(std::vector<std::vector<bool>> theBoard);
 
- private:
+ private:   
     std::vector<std::vector<bool>> theBoard;
     std::vector<std::vector<char>> charBoard;
 
