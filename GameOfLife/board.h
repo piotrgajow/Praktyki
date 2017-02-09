@@ -1,5 +1,7 @@
 #ifndef BOARD_H
 #define BOARD_H\
+#define BOARD_H
+
 
 #include <vector>
 
@@ -15,6 +17,7 @@ public:
     std::vector<std::vector<bool>> getTheBoard() {return theBoard;}
     void setStateOfCellInTheBoard(int positionInRow, int positionInColumn, bool newStateOfCell) {theBoard[positionInRow][positionInColumn] = newStateOfCell;}
     void setStateOfBoard(std::vector<std::vector<bool>> newTheBoard) {theBoard = newTheBoard;}
+
 };
 
 #endif // BOARD_H
