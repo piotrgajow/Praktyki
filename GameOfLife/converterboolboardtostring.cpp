@@ -1,4 +1,4 @@
-#include "convertercharboardtostring.h"
+#include "converterboolboardtostring.h"
 
 
 std::string ConverterCharBoardToString::convertBoolBoardToString (std::vector<std::vector<bool>> theBoard)
