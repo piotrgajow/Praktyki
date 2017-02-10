@@ -3,24 +3,14 @@ QT -= gui
 
 CONFIG += c++11
 
-TARGET = GameOfLife
+TARGET = Tester
 CONFIG += console
 CONFIG -= app_bundle
 
 TEMPLATE = app
-<<<<<<< HEAD
-SOURCES += main.cpp \
-    fillerwithrandomvalues.cpp \
-    filleremptyboard.cpp \
-    filler.cpp
-=======
 
-SOURCES += \
-    generator.cpp \
-    iteratorOverCells.cpp \
-    counterofneighbours.cpp \
-    rules.cpp
->>>>>>> 5bde2529185599a7ffde3a5a3a2aa919089e1f62
+SOURCES += main.cpp \
+    ../GameOfLife/savetofile.cpp
 
 # The following define makes your compiler emit warnings if you use
 # any feature of Qt which as been marked deprecated (the exact warnings
@@ -34,15 +24,6 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 HEADERS += \
-<<<<<<< HEAD
-    filler.h \
-    fillerwithrandomvalues.h \
-    board.h \
-    filleremptyboard.h \
-    fillerwithrandomvalues.h
-=======
-    generator.h \
-    iteratorOverCells.h \
-    counterofneighbours.h \
-    rules.h
->>>>>>> 5bde2529185599a7ffde3a5a3a2aa919089e1f62
+    Tester_Catch.h \
+    ../GameOfLife/savetofile.h \
+    postek.h
