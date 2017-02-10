@@ -2,13 +2,14 @@
 #define ITERATOR_H
 #include "board.h"
 #include "filler.h"
-#include "cellwithneighbours.h"
+#include "rules.h"
+#include "counterofneighbours.h"
 
 class IteratorOverCells
 {
 public:
     IteratorOverCells();
-    Board iterateOverAllCells(Board newBoard, Board oldBoard);
+    void iterateOverAllCells(Board & newBoard, Board oldBoard);
 };
 
 #endif // ITERATOR_H

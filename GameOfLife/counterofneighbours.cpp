@@ -1,21 +1,11 @@
-#include "cellwithneighbours.h"
+#include "counterofneighbours.h"
 
-CellWithNeighbours::CellWithNeighbours()
+CounterOfNeighbours::CounterOfNeighbours()
 {
 
 }
 
-void CellWithNeighbours::implementRules(int neighboursCount)
-{
-    if (neighboursCount < 2)
-                      cellState = false;
-                  else if (neighboursCount == 3)
-                      cellState = true;
-                  else if (neighboursCount > 3)
-                      cellState = false;
-}
-
-int CellWithNeighbours::countAliveNeighbours(Board & board, int numberOfRow, int numberOfColumn) {
+int CounterOfNeighbours::countNeighbours(Board & board, int numberOfRow, int numberOfColumn) {
   int aliveNeighboursCount = 0;
   if (board.getTheBoard()[numberOfRow-1][numberOfColumn-1])
   {

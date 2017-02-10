@@ -5,18 +5,19 @@ IteratorOverCells::IteratorOverCells()
 
 }
 
-Board IteratorOverCells::iterateOverAllCells(Board newBoard, Board oldBoard)
+void IteratorOverCells::iterateOverAllCells(Board & newBoard, Board oldBoard)
 {
-    CellWithNeighbours * cellPointer = new CellWithNeighbours;
     int neighboursCount;
+    CounterOfNeighbours counter;
+    Rules rules;
+    bool newState;
     for (int numberOfRow = 1; numberOfRow < oldBoard.getTheBoard.size() -1;
          numberOfRow++){
         for (int numberOfColumn = 1; numberOfColumn < oldBoard.getTheBoard[numberOfRow].size() -1;
              numberOfColumn++){
-            cellPointer->setCellState(oldBoard.getTheBoard()[numberOfRow][numberOfColumn]);
-            neighboursCount = cellPointer->countAliveNeighbours(oldBoard, numberOfRow, numberOfColumn);
-            cellPointer->implementRules(neighboursCount);
-            newBoard.setStateOfCellInTheBoard(numberOfRow, numberOfColumn, cellPointer->cellState);
+            neighboursCount = counter.countNeighbours(oldBoard,numberOfRow,numberOfColumn);
+            newState = rules.applayRules(oldBoard.getTheBoard()[numberOfRow][numberOfColumn],neighboursCount);
+            newBoard.setStateOfCellInTheBoard(numberOfRow,numberOfColumn,newState);
         }
     }
     return newBoard;
