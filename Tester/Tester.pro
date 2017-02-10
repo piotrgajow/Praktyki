@@ -25,4 +25,5 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 HEADERS += \
     Tester_Catch.h \
-    ../GameOfLife/savetofile.h
+    ../GameOfLife/savetofile.h \
+    postek.h
