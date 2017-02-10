@@ -9,6 +9,8 @@ public:
    FillerEmptyBoard();
    void fillBoard(Board & board);
 
+private: 
+   std::vector<std::vector<bool>> deadBoard;
 };
 
 #endif // FILLEREMPTYBOARD_H
