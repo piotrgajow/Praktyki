@@ -15,8 +15,8 @@ void IteratorOverCells::iterateOverAllCells(Board & newBoard, Board oldBoard)
          numberOfRow++){
         for (int numberOfColumn = 1; numberOfColumn < oldBoard.getTheBoard[numberOfRow].size() -1;
              numberOfColumn++){
-            neighboursCount = counter.countNeighbours(oldBoard,numberOfRow,numberOfColumn);
-            newState = rules.applayRules(oldBoard.getTheBoard()[numberOfRow][numberOfColumn],neighboursCount);
+            neighboursCount = counter.countAliveNeighbours(oldBoard,numberOfRow,numberOfColumn);
+            newState = rules.applyRules(neighboursCount, oldBoard.getTheBoard()[numberOfRow][numberOfColumn]);
             newBoard.setStateOfCellInTheBoard(numberOfRow,numberOfColumn,newState);
         }
     }

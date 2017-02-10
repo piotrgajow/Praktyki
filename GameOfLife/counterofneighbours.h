@@ -6,7 +6,7 @@ class CounterOfNeighbours
 {
 public:
     CounterOfNeighbours();
-    countNeighbours(Board & board, int numberOfRow, int numberOfColumn);
+    countAliveNeighbours(Board & board, int numberOfRow, int numberOfColumn);
 };
 
 #endif // COUNTEROFNEIGHBOURS_H
