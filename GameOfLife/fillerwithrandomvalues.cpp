@@ -24,15 +24,3 @@ void FillerWithRandomValues::fillBoard( Board & board){
     }
     board.setStateOfBoard(theBoard);
 }
-
-
-void FillerWithRandomValues::show(Board board)
-{
-    for (int row=0; row<numberOfRow; row++){
-
-        for (int column=0; column<numberOfColumn; column++)
-        {
-            std::cout << board.getTheBoard()[row][column];
-        } std::cout << std::endl;
-    }
-}
