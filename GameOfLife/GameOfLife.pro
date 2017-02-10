@@ -9,9 +9,16 @@ CONFIG -= app_bundle
 
 TEMPLATE = app
 
+
 SOURCES += main.cpp \
     game.cpp \
-    savetofile.cpp
+    savetofile.cpp \
+
+    generator.cpp \
+    iteratorOverCells.cpp \
+    counterofneighbours.cpp \
+    rules.cpp
+
 
 # The following define makes your compiler emit warnings if you use
 # any feature of Qt which as been marked deprecated (the exact warnings
@@ -24,6 +31,12 @@ DEFINES += QT_DEPRECATED_WARNINGS
 # You can also select to disable deprecated APIs only up to a certain version of Qt.
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
-HEADERS += \
+HEADERS += 
+
     Game.h \
-    Savetofile.h
+    Savetofile.h \
+    generator.h \
+    iteratorOverCells.h \
+    counterofneighbours.h \
+    rules.h
+
