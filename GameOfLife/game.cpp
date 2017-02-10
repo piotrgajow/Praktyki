@@ -4,10 +4,14 @@ Game::Game()
 {
 Board board;
 FillerWithRandomValues filler;
-filler.fillBoard(&board);
-ConverterCharBoardToString converter;
-Converter.convertBoolBoardToString(board.theBoard);
-DisplayGameBoardOnTheCommandLine display;
-display(converter.boardConvertToString);
+filler.fillBoard(board);\
+TemporaryDisplay display(board.getTheBoard());
+
+//ConverterCharBoardToString converter;
+//Converter.convertBoolBoardToString(board.theBoard);
+//DisplayGameBoardOnTheCommandLine display;
+//display(converter.boardConvertToString);
+
+
 
 }

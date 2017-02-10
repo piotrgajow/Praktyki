@@ -16,7 +16,11 @@ SOURCES += main.cpp \
     generator.cpp \
     iteratorOverCells.cpp \
     counterofneighbours.cpp \
-    rules.cpp
+    rules.cpp \
+    filler.cpp \
+    filleremptyboard.cpp \
+    fillerwithrandomvalues.cpp \
+    temporarydisplay.cpp
 
 
 # The following define makes your compiler emit warnings if you use
@@ -35,5 +39,10 @@ HEADERS += Game.h \
     generator.h \
     iteratorOverCells.h \
     counterofneighbours.h \
-    rules.h
+    rules.h \
+    board.h \
+    filler.h \
+    filleremptyboard.h \
+    fillerwithrandomvalues.h \
+    temporarydisplay.h
 

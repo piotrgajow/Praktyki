@@ -1,5 +1,8 @@
 #ifndef GAME_H
 #define GAME_H
+#include "board.h"
+#include "fillerwithrandomvalues.h"
+#include "temporarydisplay.h"
 
 
 class Game
