@@ -11,7 +11,8 @@ class FillerWithRandomValues:public virtual Filler
 public:
     FillerWithRandomValues();
    void fillBoard( Board &board);
-   void show(Board board);
+ private:
+    std::vector<std::vector<bool>> theBoard;
 
 };
 
