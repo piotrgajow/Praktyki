@@ -15,9 +15,6 @@ bool Rules::applyRules(int neighboursCount, bool cellState)
         return false;
     else if (neighboursCount == 2)
     {
-        if (cellState)
-            return true;
-        else
-            return false;
+        return cellState;
     }
 }
