@@ -17,6 +17,7 @@ std::string ConverterBoolBoardToString::convertBoolBoardToString (std::vector<st
                   boardConvertToString+=liveCell;
               }
           }
+          boardConvertToString+="\n";
     }
     return boardConvertToString;
 }
