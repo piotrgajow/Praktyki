@@ -19,8 +19,7 @@ SOURCES += main.cpp \
     rules.cpp \
     filler.cpp \
     filleremptyboard.cpp \
-    fillerwithrandomvalues.cpp \
-    temporarydisplay.cpp
+    fillerwithrandomvalues.cpp
 
 
 # The following define makes your compiler emit warnings if you use
@@ -43,6 +42,5 @@ HEADERS += Game.h \
     board.h \
     filler.h \
     filleremptyboard.h \
-    fillerwithrandomvalues.h \
-    temporarydisplay.h
+    fillerwithrandomvalues.h
 
