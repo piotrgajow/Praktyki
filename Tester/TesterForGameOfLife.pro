@@ -11,12 +11,12 @@ TEMPLATE = app
 
 SOURCES += \
     testmain.cpp \
-    ../filler.cpp \
-    ../filleremptyboard.cpp \
-    fillerwithrandomvalues.cpp \
     test_filleremptyboard.cpp \
     test_fillerwithrandomvalues.cpp \
-    test_generator.cpp
+    test_generator.cpp \
+    ../GameOfLife/filleremptyboard.cpp \
+    ../GameOfLife/filler.cpp
+
 
 
 # The following define makes your compiler emit warnings if you use
@@ -32,7 +32,8 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 HEADERS += \
     Tester_Catch.h \
-    ../board.h \
-    filler.h \
-    filleremptyboard.h \
-    fillerwithrandomvalues.h
+    ../GameOfLife/filleremptyboard.h \
+    ../GameOfLife/filler.h
+
+DISTFILES += \
+    TesterForGameOfLife.pro.user
