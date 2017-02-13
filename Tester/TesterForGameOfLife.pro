@@ -3,26 +3,20 @@ QT -= gui
 
 CONFIG += c++11
 
-TARGET = GameOfLife
+TARGET = TesterForGameOfLife
 CONFIG += console
 CONFIG -= app_bundle
 
 TEMPLATE = app
 
-
-SOURCES += main.cpp \
-    game.cpp \
-    savetofile.cpp \
-    generator.cpp \
-    iteratorOverCells.cpp \
-    counterofneighbours.cpp \
-    rules.cpp \
-    filler.cpp \
-    filleremptyboard.cpp \
+SOURCES += \
+    testmain.cpp \
+    ../filler.cpp \
+    ../filleremptyboard.cpp \
     fillerwithrandomvalues.cpp \
-    converterboolboardtostring.cpp \
-    displaygameboardonthecommandline.cpp
-
+    test_filleremptyboard.cpp \
+    test_fillerwithrandomvalues.cpp \
+    test_generator.cpp
 
 # The following define makes your compiler emit warnings if you use
 # any feature of Qt which as been marked deprecated (the exact warnings
@@ -35,20 +29,9 @@ DEFINES += QT_DEPRECATED_WARNINGS
 # You can also select to disable deprecated APIs only up to a certain version of Qt.
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
-HEADERS += Game.h \
-    Savetofile.h \
-    generator.h \
-    iteratorOverCells.h \
-    counterofneighbours.h \
-    rules.h \
-    board.h \
+HEADERS += \
+    Tester_Catch.h \
+    ../board.h \
     filler.h \
     filleremptyboard.h \
-    fillerwithrandomvalues.h \
-    converterboolboardtostring.h \
-    displaygameboardonthecommandline.h
-
-DISTFILES += \
-    GameOfLife.pro.user \
-    README.md
-
+    fillerwithrandomvalues.h

@@ -9,7 +9,7 @@ class IteratorOverCells
 {
 public:
     IteratorOverCells();
-    void iterateOverAllCells(Board & newBoard, Board oldBoard);
+    Board iterateOverAllCells(Board & newBoard, Board oldBoard);
 };
 
 #endif // ITERATOR_H

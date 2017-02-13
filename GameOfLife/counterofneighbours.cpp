@@ -5,7 +5,7 @@ CounterOfNeighbours::CounterOfNeighbours()
 
 }
 
-int CounterOfNeighbours::countNeighbours(Board & board, int numberOfRow, int numberOfColumn) {
+int CounterOfNeighbours::countAliveNeighbours(Board & board, int numberOfRow, int numberOfColumn) {
   int aliveNeighboursCount = 0;
   if (board.getTheBoard()[numberOfRow-1][numberOfColumn-1])
   {
