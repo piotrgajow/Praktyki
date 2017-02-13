@@ -1,15 +1,15 @@
 #include "generator.h"
-#include "filler.h"
 
 Generator::Generator()
 {
 
 }
 
-Board Generator::generateNewBoard(Board oldBoard)
+Board Generator::generateNextBoard(Board oldBoard)
 {
     Board newBoard;
-    Filler empty(newBoard);
+    FillerEmptyBoard empty;
+    empty.fillBoard(newBoard);
     IteratorOverCells iterator;
     iterator.iterateOverAllCells(newBoard, oldBoard);
     return newBoard;
