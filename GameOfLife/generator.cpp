@@ -5,7 +5,7 @@ Generator::Generator()
 
 }
 
-Board Generator::generateNextBoard(Board & oldBoard)
+Board Generator::generateNextBoard(Board oldBoard)
 {
     Board newBoard;
     FillerEmptyBoard empty;
