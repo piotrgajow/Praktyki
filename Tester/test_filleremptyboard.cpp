@@ -1,7 +1,7 @@
 #include "Tester_Catch.h"
-#include "filler.h"
-#include "filleremptyboard.h"
-#include "fillerwithrandomvalues.h"
+
+#include "../GameOfLife/filleremptyboard.h"
+#include "../GameOfLife/filler.h"
 
 
 TEST_CASE( "test to filleremptyboard", "[FillerEmptyBoard]" ) {
