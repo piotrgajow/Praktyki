@@ -1,0 +1,13 @@
+INPUT(
+./release\main.o
+./release\game.o
+./release\savetofile.o
+./release\generator.o
+./release\iteratorOverCells.o
+./release\counterofneighbours.o
+./release\rules.o
+./release\filler.o
+./release\filleremptyboard.o
+./release\fillerwithrandomvalues.o
+./release\temporarydisplay.o
+);

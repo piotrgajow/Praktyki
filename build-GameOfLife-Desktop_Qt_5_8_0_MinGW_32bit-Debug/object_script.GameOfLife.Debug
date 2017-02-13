@@ -1,0 +1,13 @@
+INPUT(
+./debug\main.o
+./debug\game.o
+./debug\savetofile.o
+./debug\generator.o
+./debug\iteratorOverCells.o
+./debug\counterofneighbours.o
+./debug\rules.o
+./debug\filler.o
+./debug\filleremptyboard.o
+./debug\fillerwithrandomvalues.o
+./debug\temporarydisplay.o
+);
