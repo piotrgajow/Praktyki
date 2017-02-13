@@ -25,7 +25,7 @@ FillerEmptyBoard filleremptyboard;
 Board board;
 filleremptyboard.fillBoard(board);
 
-CHECK(board.getTheBoard().size() == 30);
-CHECK(board.getTheBoard()[0].size() == 30);
+CHECK(board.getTheBoard().size() == 4);
+CHECK(board.getTheBoard()[0].size() == 4);
 
 }
