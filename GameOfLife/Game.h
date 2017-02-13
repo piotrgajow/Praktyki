@@ -2,7 +2,8 @@
 #define GAME_H
 #include "board.h"
 #include "fillerwithrandomvalues.h"
-#include "temporarydisplay.h"
+#include "converterboolboardtostring.h"
+#include "displaygameboardonthecommandline.h"
 #include "generator.h"
 
 class Game
