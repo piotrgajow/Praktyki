@@ -15,7 +15,8 @@ SOURCES += \
     test_generator.cpp \
     ../GameOfLife/filleremptyboard.cpp \
     ../GameOfLife/filler.cpp \
-    test_savetofile.cpp
+    test_savetofile.cpp \
+    ../GameOfLife/savetofile.cpp
 
 
 
@@ -33,7 +34,8 @@ DEFINES += QT_DEPRECATED_WARNINGS
 HEADERS += \
     Tester_Catch.h \
     ../GameOfLife/filleremptyboard.h \
-    ../GameOfLife/filler.h
+    ../GameOfLife/filler.h \
+    ../GameOfLife/Savetofile.h
 
 DISTFILES += \
     TesterForGameOfLife.pro.user
