@@ -12,8 +12,11 @@ TEMPLATE = app
 SOURCES += \
     testmain.cpp \
     test_filleremptyboard.cpp \
+    test_fillerwithrandomvalues.cpp \
+    test_generator.cpp \
     ../GameOfLife/filleremptyboard.cpp \
     ../GameOfLife/filler.cpp
+
 
 
 # The following define makes your compiler emit warnings if you use
