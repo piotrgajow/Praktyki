@@ -1,6 +1,7 @@
 #ifndef DISPLAYGAMEBOARDONTHECOMMANDLINE_H
 #define DISPLAYGAMEBOARDONTHECOMMANDLINE_H
-
+#include <iostream>
+#include <string>
 
 class DisplayGameBoardOnTheCommandLine
 {

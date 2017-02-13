@@ -19,7 +19,9 @@ SOURCES += main.cpp \
     rules.cpp \
     filler.cpp \
     filleremptyboard.cpp \
-    fillerwithrandomvalues.cpp
+    fillerwithrandomvalues.cpp \
+    converterboolboardtostring.cpp \
+    displaygameboardonthecommandline.cpp
 
 
 # The following define makes your compiler emit warnings if you use
@@ -42,5 +44,11 @@ HEADERS += Game.h \
     board.h \
     filler.h \
     filleremptyboard.h \
-    fillerwithrandomvalues.h
+    fillerwithrandomvalues.h \
+    converterboolboardtostring.h \
+    displaygameboardonthecommandline.h
+
+DISTFILES += \
+    GameOfLife.pro.user \
+    README.md
 
