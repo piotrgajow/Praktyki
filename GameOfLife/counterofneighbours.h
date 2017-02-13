@@ -1,6 +1,6 @@
 #ifndef COUNTEROFNEIGHBOURS_H
 #define COUNTEROFNEIGHBOURS_H
-
+#include "board.h"
 
 class CounterOfNeighbours
 {

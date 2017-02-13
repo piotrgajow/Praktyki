@@ -6,7 +6,7 @@ class Rules
 {
 public:
     Rules();
-    bool applayRules(int neighboursCount);
+    bool applyRules(int,bool);
 };
 
 #endif // RULES_H
