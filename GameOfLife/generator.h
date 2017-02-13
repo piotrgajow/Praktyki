@@ -9,7 +9,7 @@ class Generator
 {
 public:
     Generator();
-    Board generateNextBoard(Board oldBoard);
+    Board generateNextBoard(Board & oldBoard);
 };
 
 #endif // GENERATOR_H
