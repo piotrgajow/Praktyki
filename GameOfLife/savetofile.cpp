@@ -2,15 +2,16 @@
 
 
 
-SaveTofile::SaveTofile(QString fileName, QString text)
+SaveTofile::SaveTofile(std::string fileName, std::string text)
 {
-    QFile plik(fileName);
-        plik.open(QIODevice::WriteOnly | QIODevice::Truncate | QIODevice::Text);
-
-        QTextStream stream(&plik);
-        stream << text;
-        plik.close();
-
+        std::fstream file (fileName, std::ios::in | std::ios::out);
+        if (file.good())
+        {
+            file << text;
+        }
+        else
+        std::cout << "load failed";
+        file.close();
 
 }
 
