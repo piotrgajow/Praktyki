@@ -3,15 +3,26 @@
 Game::Game()
 {
 Board board;
+CheckButtonPressed newPressed;
 FillerWithRandomValues filler;
 DisplayGameBoardOnTheCommandLine display;
 ConverterBoolBoardToString converter;
-filler.fillBoard(board);
-display.displayGameBoardOnTheCommandLine(converter.convertBoolBoardToString((board.getTheBoard())));
 Generator generator;
-generator.generateNextBoard(board);
-display.displayGameBoardOnTheCommandLine((converter.convertBoolBoardToString(generator.generateNextBoard(board).getTheBoard())));
+filler.fillBoard(board);
 
-
-
+while(1)
+    {
+    newPressed.checkStatusOfButtonPressed();
+    do
+    {
+        system("cls");
+        converter.convertBoolBoardToString((board.getTheBoard()));
+        display.displayGameBoardOnTheCommandLine(converter.getBoardConvertToString());
+        board = generator.generateNextBoard(board);
+        newPressed.checkStatusOfButtonPressed();
+        Sleep(1000);
+    }
+    while (newPressed.getStatusOfIncrementLoop() == true);
+    system("pause");
+    }
 }
