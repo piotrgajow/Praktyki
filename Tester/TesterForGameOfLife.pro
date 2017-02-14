@@ -15,9 +15,16 @@ SOURCES += \
     test_generator.cpp \
     ../GameOfLife/filleremptyboard.cpp \
     ../GameOfLife/filler.cpp \
-    test_savetofile.cpp \
+    test_generator.cpp \
+    ../GameOfLife/generator.cpp \
+    ../GameOfLife/iteratorOverCells.cpp \
+    ../GameOfLife/counterofneighbours.cpp \
+    ../GameOfLife/converterboolboardtostring.cpp \
+    ../GameOfLife/fillerwithrandomvalues.cpp \
+    ../GameOfLife/game.cpp \
+    ../GameOfLife/rules.cpp \
+    ../GameOfLife/displaygameboardonthecommandline.cpp \
     ../GameOfLife/savetofile.cpp
-
 
 
 # The following define makes your compiler emit warnings if you use
@@ -35,7 +42,19 @@ HEADERS += \
     Tester_Catch.h \
     ../GameOfLife/filleremptyboard.h \
     ../GameOfLife/filler.h \
-    ../GameOfLife/Savetofile.h
+    ../GameOfLife/generator.h \
+    ../GameOfLife/iteratorOverCells.h \
+    ../GameOfLife/board.h \
+    ../GameOfLife/fillerwithrandomvalues.h \
+    ../GameOfLife/converterboolboardtostring.h \
+    ../GameOfLife/displaygameboardonthecommandline.h \
+    ../GameOfLife/counterofneighbours.h \
+    ../GameOfLife/Game.h \
+    ../GameOfLife/Savetofile.h \
+    ../GameOfLife/rules.h
 
 DISTFILES += \
     TesterForGameOfLife.pro.user
+
+SUBDIRS += \
+    ../GameOfLife/GameOfLife.pro
