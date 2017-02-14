@@ -22,3 +22,8 @@ std::string ConverterBoolBoardToString::convertBoolBoardToString (std::vector<st
     }
     return boardConvertToString;
 }
+
+std::string ConverterBoolBoardToString::getBoardConvertToString() const
+{
+    return boardConvertToString;
+}

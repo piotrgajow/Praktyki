@@ -3,8 +3,8 @@
 
 #include <vector>
 
-const int numberOfRow = 4;
-const int numberOfColumn = 4;
+const int numberOfRow = 30;
+const int numberOfColumn = 30;
 
 class Board
 {

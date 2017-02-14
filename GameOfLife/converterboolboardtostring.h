@@ -8,6 +8,8 @@ class ConverterBoolBoardToString
 public:
 
       std::string convertBoolBoardToString (std::vector<std::vector<bool>> theBoard);
+      std::string getBoardConvertToString() const;
+
 private:
 
       char deadCell='.', liveCell='x';
