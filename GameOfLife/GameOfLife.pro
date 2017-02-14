@@ -21,7 +21,8 @@ SOURCES += main.cpp \
     filleremptyboard.cpp \
     fillerwithrandomvalues.cpp \
     converterboolboardtostring.cpp \
-    displaygameboardonthecommandline.cpp
+    displaygameboardonthecommandline.cpp \
+    checkbuttonpressed.cpp
 
 
 # The following define makes your compiler emit warnings if you use
@@ -46,7 +47,8 @@ HEADERS += Game.h \
     filleremptyboard.h \
     fillerwithrandomvalues.h \
     converterboolboardtostring.h \
-    displaygameboardonthecommandline.h
+    displaygameboardonthecommandline.h \
+    checkbuttonpressed.h
 
 DISTFILES += \
     GameOfLife.pro.user \

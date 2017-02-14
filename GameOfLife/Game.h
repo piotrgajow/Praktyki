@@ -5,6 +5,7 @@
 #include "converterboolboardtostring.h"
 #include "displaygameboardonthecommandline.h"
 #include "generator.h"
+#include "checkbuttonpressed.h"
 
 class Game
 {
