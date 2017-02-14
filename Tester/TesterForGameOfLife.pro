@@ -13,18 +13,20 @@ SOURCES += \
     testmain.cpp \
     test_filleremptyboard.cpp \
     test_generator.cpp \
-    ../GameOfLife/filleremptyboard.cpp \
-    ../GameOfLife/filler.cpp \
-    test_generator.cpp \
-    ../GameOfLife/generator.cpp \
-    ../GameOfLife/iteratorOverCells.cpp \
-    ../GameOfLife/counterofneighbours.cpp \
+    ../GameOfLife/checkbuttonpressed.cpp \
     ../GameOfLife/converterboolboardtostring.cpp \
+    ../GameOfLife/counterofneighbours.cpp \
+    ../GameOfLife/displaygameboardonthecommandline.cpp \
+    ../GameOfLife/filler.cpp \
+    ../GameOfLife/filleremptyboard.cpp \
     ../GameOfLife/fillerwithrandomvalues.cpp \
     ../GameOfLife/game.cpp \
+    ../GameOfLife/generator.cpp \
+    ../GameOfLife/iteratorOverCells.cpp \
     ../GameOfLife/rules.cpp \
-    ../GameOfLife/displaygameboardonthecommandline.cpp \
-    ../GameOfLife/savetofile.cpp
+    ../GameOfLife/savetofile.cpp \
+    test_checkfilecheckbuttonpressed.cpp
+
 
 # The following define makes your compiler emit warnings if you use
 # any feature of Qt which as been marked deprecated (the exact warnings
@@ -39,18 +41,20 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 HEADERS += \
     Tester_Catch.h \
-    ../GameOfLife/filleremptyboard.h \
+    ../GameOfLife/board.h \
+    ../GameOfLife/checkbuttonpressed.h \
+    ../GameOfLife/converterboolboardtostring.h \
+    ../GameOfLife/counterofneighbours.h \
+    ../GameOfLife/displaygameboardonthecommandline.h \
     ../GameOfLife/filler.h \
+    ../GameOfLife/filleremptyboard.h \
+    ../GameOfLife/fillerwithrandomvalues.h \
+    ../GameOfLife/Game.h \
     ../GameOfLife/generator.h \
     ../GameOfLife/iteratorOverCells.h \
-    ../GameOfLife/board.h \
-    ../GameOfLife/fillerwithrandomvalues.h \
-    ../GameOfLife/converterboolboardtostring.h \
-    ../GameOfLife/displaygameboardonthecommandline.h \
-    ../GameOfLife/counterofneighbours.h \
-    ../GameOfLife/Game.h \
-    ../GameOfLife/Savetofile.h \
-    ../GameOfLife/rules.h
+    ../GameOfLife/rules.h \
+    ../GameOfLife/Savetofile.h
+
 DISTFILES += \
     TesterForGameOfLife.pro.user
 
