@@ -25,7 +25,7 @@ TEST_CASE("Test to converterboolboardtostring", "[Converterboolboardtostring]")
  TesttheBoard.clear();
 }
 
-TEST_CASE("Test to Converterboolboardtostring", "[Size]")
+TEST_CASE("Test to Converterboolboardtostring check size of string", "[Converterboolboardtostring]")
 {
     std::vector<std::vector<bool>> TesttheBoard {{0,0,0,0},
                                                  {0,1,1,0},
