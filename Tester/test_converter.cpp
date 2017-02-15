@@ -19,9 +19,6 @@ TEST_CASE("Test to converterboolboardtostring", "[Converterboolboardtostring]")
  CHECK(converter->convertBoolBoardToString(TesttheBoard)[3]=='.');
  CHECK(converter->convertBoolBoardToString(TesttheBoard)[4]=='x');
  CHECK(converter->convertBoolBoardToString(TesttheBoard)[5]=='\n');
-
-
-
  TesttheBoard.clear();
 }
 
