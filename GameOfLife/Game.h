@@ -11,8 +11,7 @@ class Game
 {
 public:  
     Game();
-    void startInfiniteLoop();
-
+    
 private:
     Board board;
     CheckButtonPressed newPressed;
@@ -20,6 +19,7 @@ private:
     DisplayGameBoardOnTheCommandLine display;
     ConverterBoolBoardToString converter;
     Generator generator;
+    void startInfiniteLoop();
 };
 
-#endif // GAME_H
+#endif 
