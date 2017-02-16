@@ -17,7 +17,8 @@ public:
         theBoard = newTheBoard; }
     void setStateOfCellInTheBoard(int positionInRow, int positionInColumn, bool newStateOfCell) {
         theBoard[positionInRow][positionInColumn] = newStateOfCell; }
-
+    Board();
+    Board(int numberOfRows, int numberOfColumns);
 };
 
 #endif // BOARD_H
