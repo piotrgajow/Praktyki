@@ -15,6 +15,7 @@ void CheckButtonPressed::checkStatusOfButtonPressed()
     {
         loopStatus = !loopStatus;
         Sleep(100);
+        std::cout<<"coś tam"<<std::endl;
     }
 }
 
