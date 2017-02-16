@@ -22,7 +22,8 @@ SOURCES += main.cpp \
     fillerwithrandomvalues.cpp \
     converterboolboardtostring.cpp \
     displaygameboardonthecommandline.cpp \
-    checkbuttonpressed.cpp
+    checkbuttonpressed.cpp \
+    board.cpp
 
 
 # The following define makes your compiler emit warnings if you use

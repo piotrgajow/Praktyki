@@ -18,5 +18,3 @@ for(unsigned positionLine = 0 ; positionLine < board.getTheBoard().size() ; posi
     }
 }
 }
-
-

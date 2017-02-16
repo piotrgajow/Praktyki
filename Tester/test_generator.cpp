@@ -21,7 +21,6 @@ TEST_CASE( "check board generator", "[test generator]" ){
     Generator generator;
     board1 = generator.generateNextBoard(board1);
 
-    //if (board1.getTheBoard() == board2.getTheBoard()) std::cout << "true"; else std::cout << "false";
     CHECK(board1.getTheBoard() == board2.getTheBoard());
 
     std::vector<std::vector <bool>> inputData2 = {{0,0,0,0},
