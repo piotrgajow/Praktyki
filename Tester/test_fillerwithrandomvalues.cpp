@@ -4,8 +4,8 @@
 #include "..\GameOfLife\filler.h"
 
 
-////////////////////////////////////////////////////////////////////////////////////
-TEST_CASE( "test to fillerwithrandomvalues frame 1", "[FillerWithRandomValues]" ) {
+
+TEST_CASE( "test to fillerwithrandomvalues top frame", "[FillerWithRandomValues]" ) {
 
 FillerWithRandomValues fillerWithRandomValues;
 Board board;
@@ -16,8 +16,8 @@ for(unsigned positionColumn =0; positionColumn < board.getTheBoard()[0].size();p
     CHECK(board.getTheBoard()[0][positionColumn] == 0);
 }
 }
-////////////////////////////////////////////////////////////////////////////////////
-TEST_CASE( "test to fillerwithrandomvalues frame 2", "[FillerWithRandomValues]" ) {
+
+TEST_CASE( "test to fillerwithrandomvalues left frame", "[FillerWithRandomValues]" ) {
 
 FillerWithRandomValues fillerWithRandomValues;
 Board board;
@@ -28,8 +28,8 @@ for(unsigned positionLine = 0 ; positionLine < board.getTheBoard().size() ; posi
     CHECK(board.getTheBoard()[positionLine][0] == 0);
 }
 }
-////////////////////////////////////////////////////////////////////////////////////
-TEST_CASE( "test to fillerwithrandomvalues frame 3", "[FillerWithRandomValues]" ) {
+
+TEST_CASE( "test to fillerwithrandomvalues bottom frame", "[FillerWithRandomValues]" ) {
 
 FillerWithRandomValues fillerWithRandomValues;
 Board board;
@@ -40,8 +40,8 @@ for(unsigned positionColumn =0; positionColumn < board.getTheBoard()[0].size();p
     CHECK(board.getTheBoard()[board.getTheBoard().size()-1][positionColumn] == 0);
 }
 }
-////////////////////////////////////////////////////////////////////////////////////
-TEST_CASE( "test to fillerwithrandomvalues frame 4", "[FillerWithRandomValues]" ) {
+
+TEST_CASE( "test to fillerwithrandomvalues right frame", "[FillerWithRandomValues]" ) {
 
 FillerWithRandomValues fillerWithRandomValues;
 Board board;
@@ -52,8 +52,8 @@ for(unsigned positionLine = 0 ; positionLine < board.getTheBoard().size() ; posi
     CHECK(board.getTheBoard()[positionLine][board.getTheBoard().size()-1] == 0);
 }
 }
-////////////////////////////////////////////////////////////////////////////////////
-TEST_CASE( "test to fillerwithrandomvalues", "[FillerWithRandomValues]" ) {
+
+TEST_CASE( "test to fillerwithrandomvalues board without frame", "[FillerWithRandomValues]" ) {
 
 FillerWithRandomValues fillerWithRandomValues;
 Board board;
@@ -67,4 +67,4 @@ for(unsigned positionLine = 1 ; positionLine < board.getTheBoard().size()-1 ; po
     }
 }
 }
-////////////////////////////////////////////////////////////////////////////////////
+
