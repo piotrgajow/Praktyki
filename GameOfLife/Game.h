@@ -18,7 +18,7 @@ private:
     CheckButtonPressed newPressed;
     FillerWithRandomValues filler;
     DisplayGameBoardOnTheCommandLine display;
-    ConverterBoolBoardToString converter;
+    Converter converter;
     Generator generator;
 };
 
