@@ -19,13 +19,5 @@ for(unsigned positionLine = 0 ; positionLine < board.getTheBoard().size() ; posi
 }
 }
 
-TEST_CASE( "check board size ", "[FillerEmptyBoard]" ) {
 
-FillerEmptyBoard filleremptyboard;
-Board board;
-filleremptyboard.fillBoard(board);
 
-CHECK(board.getTheBoard().size() == 4);
-CHECK(board.getTheBoard()[0].size() == 4);
-
-}
