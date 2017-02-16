@@ -2,7 +2,7 @@
 
 CheckButtonPressed::CheckButtonPressed()
 {
-
+   incrementLoopStatus = false;
 }
 
 void CheckButtonPressed::checkStatusOfButtonPressed()
@@ -13,9 +13,8 @@ void CheckButtonPressed::checkStatusOfButtonPressed()
     }
     else if(GetAsyncKeyState(VK_SPACE))
     {
-        loopStatus = !loopStatus;
+        incrementLoopStatus = !incrementLoopStatus;
         Sleep(100);
-        std::cout<<"coś tam"<<std::endl;
     }
 }
 

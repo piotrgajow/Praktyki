@@ -4,8 +4,8 @@
 #include <iostream>
 TEST_CASE( "check board generator", "[test generator]" ){
 
-    Board board1;
-    Board board2;
+    Board board1(4,4);
+    Board board2(4,4);
 
     std::vector<std::vector <bool>> inputData = {{0,0,0,0},
                                                  {0,1,1,0},
