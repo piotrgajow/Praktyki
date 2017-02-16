@@ -13,12 +13,12 @@ void CheckButtonPressed::checkStatusOfButtonPressed()
     }
     else if(GetAsyncKeyState(VK_SPACE))
     {
-            incrementLoopStatus = !incrementLoopStatus;
+            LoopStatus = !LoopStatus;
             Sleep(100);
     }
 }
 
-bool CheckButtonPressed::getStatusOfIncrementLoop()
+bool CheckButtonPressed::getStatusOfLoop()
 {
-    return incrementLoopStatus;
+    return LoopStatus;
 }
