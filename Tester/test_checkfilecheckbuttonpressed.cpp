@@ -1,9 +1,9 @@
 #include "Tester_Catch.h"
 
 #include "../GameOfLife/checkbuttonpressed.h"
-#include "../GameOfLife/checkbuttonpressed.h"
 
-TEST_CASE( "check button pressed SPACE", "[checkButtonPressed]" ) {
+
+TEST_CASE( "Check if SPACE changes statusOfIncrementLoop", "[checkButtonPressed]" ) {
 
 CheckButtonPressed pressTest;
 

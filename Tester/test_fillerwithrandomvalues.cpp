@@ -4,8 +4,7 @@
 #include "..\GameOfLife\filler.h"
 
 
-////////////////////////////////////////////////////////////////////////////////////
-TEST_CASE( "test to fillerwithrandomvalues frame 1", "[FillerWithRandomValues]" ) {
+TEST_CASE( "Check if top border of frame is filled with zero", "[FillerWithRandomValues]" ) {
 
 FillerWithRandomValues fillerWithRandomValues;
 Board board;
@@ -16,8 +15,9 @@ for(unsigned positionColumn =0; positionColumn < board.getTheBoard()[0].size();p
     CHECK(board.getTheBoard()[0][positionColumn] == 0);
 }
 }
-////////////////////////////////////////////////////////////////////////////////////
-TEST_CASE( "test to fillerwithrandomvalues frame 2", "[FillerWithRandomValues]" ) {
+
+
+TEST_CASE( "Check if left border of frame is filled with zero", "[FillerWithRandomValues]" ) {
 
 FillerWithRandomValues fillerWithRandomValues;
 Board board;
@@ -28,8 +28,9 @@ for(unsigned positionLine = 0 ; positionLine < board.getTheBoard().size() ; posi
     CHECK(board.getTheBoard()[positionLine][0] == 0);
 }
 }
-////////////////////////////////////////////////////////////////////////////////////
-TEST_CASE( "test to fillerwithrandomvalues frame 3", "[FillerWithRandomValues]" ) {
+
+
+TEST_CASE( "Check if bottom border of frame is filled with zero", "[FillerWithRandomValues]" ) {
 
 FillerWithRandomValues fillerWithRandomValues;
 Board board;
@@ -40,8 +41,9 @@ for(unsigned positionColumn =0; positionColumn < board.getTheBoard()[0].size();p
     CHECK(board.getTheBoard()[board.getTheBoard().size()-1][positionColumn] == 0);
 }
 }
-////////////////////////////////////////////////////////////////////////////////////
-TEST_CASE( "test to fillerwithrandomvalues frame 4", "[FillerWithRandomValues]" ) {
+
+
+TEST_CASE( "Check if right border of frame is filled with zero", "[FillerWithRandomValues]" ) {
 
 FillerWithRandomValues fillerWithRandomValues;
 Board board;
@@ -52,8 +54,9 @@ for(unsigned positionLine = 0 ; positionLine < board.getTheBoard().size() ; posi
     CHECK(board.getTheBoard()[positionLine][board.getTheBoard().size()-1] == 0);
 }
 }
-////////////////////////////////////////////////////////////////////////////////////
-TEST_CASE( "test to fillerwithrandomvalues", "[FillerWithRandomValues]" ) {
+
+
+TEST_CASE( "Check if values in the board are no higher than 1", "[FillerWithRandomValues]" ) {
 
 FillerWithRandomValues fillerWithRandomValues;
 Board board;
@@ -67,4 +70,3 @@ for(unsigned positionLine = 1 ; positionLine < board.getTheBoard().size()-1 ; po
     }
 }
 }
-////////////////////////////////////////////////////////////////////////////////////
