@@ -7,7 +7,7 @@
 class CheckButtonPressed
 {
 private:
-    bool LoopStatus = false;
+    bool loopStatus = false;
 public:
     CheckButtonPressed();
     void checkStatusOfButtonPressed();
