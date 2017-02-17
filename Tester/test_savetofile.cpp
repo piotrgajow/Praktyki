@@ -7,20 +7,19 @@ TEST_CASE("Test If Savetofile creates file with Random text", "file")
 {
     std::string txt;
     SaveTofile saver1( "test2.txt" ,"Random text");
-
     std::fstream file ("test2.txt", std::ios::in | std::ios::out);
+
     do
     {
         getline(file,txt);
-
     }
     while (!file.eof());
 
-    std::cout<<txt<<std::endl;
     file.close();
     REQUIRE(txt == "Random text");
     remove("test2.txt");
 }
+
 
 TEST_CASE("Test If Savetofile creates readable file", "file")
 {

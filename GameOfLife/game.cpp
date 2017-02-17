@@ -21,7 +21,7 @@ void Game::startInfiniteLoop()
             newPressed.checkStatusOfButtonPressed();
             Sleep(1000);
         }
-        while (newPressed.getStatusOfIncrementLoop() == true);
+        while (newPressed.getStatusOfLoop() == true);
         system("pause");
         }
 }

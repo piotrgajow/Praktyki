@@ -9,17 +9,17 @@
 
 class Game
 {
-public:  
+public:
     Game();
-    void startInfiniteLoop();
 
 private:
     Board board;
     CheckButtonPressed newPressed;
     FillerWithRandomValues filler;
     DisplayGameBoardOnTheCommandLine display;
-    ConverterBoolBoardToString converter;
+    Converter converter;
     Generator generator;
+    void startInfiniteLoop();
 };
 
-#endif // GAME_H
+#endif

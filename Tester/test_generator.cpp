@@ -4,8 +4,8 @@
 #include <iostream>
 TEST_CASE( "check board generator", "[test generator]" ){
 
-    Board board1;
-    Board board2;
+    Board board1(4,4);
+    Board board2(4,4);
 
     std::vector<std::vector <bool>> inputData = {{0,0,0,0},
                                                  {0,1,1,0},
@@ -21,7 +21,6 @@ TEST_CASE( "check board generator", "[test generator]" ){
     Generator generator;
     board1 = generator.generateNextBoard(board1);
 
-    //if (board1.getTheBoard() == board2.getTheBoard()) std::cout << "true"; else std::cout << "false";
     CHECK(board1.getTheBoard() == board2.getTheBoard());
 
     std::vector<std::vector <bool>> inputData2 = {{0,0,0,0},
