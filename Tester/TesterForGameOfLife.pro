@@ -27,7 +27,9 @@ SOURCES += \
     ../GameOfLife/savetofile.cpp \
     test_checkfilecheckbuttonpressed.cpp \
     mock_checkbuttonpressed.cpp \
-    ../GameOfLife/board.cpp
+    ../GameOfLife/board.cpp \
+    test_converter.cpp \
+    test_fillerwithrandomvalues.cpp
 
 
 
