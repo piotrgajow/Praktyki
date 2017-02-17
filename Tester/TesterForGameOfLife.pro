@@ -25,7 +25,9 @@ SOURCES += \
     ../GameOfLife/iteratorOverCells.cpp \
     ../GameOfLife/rules.cpp \
     ../GameOfLife/savetofile.cpp \
-    test_checkfilecheckbuttonpressed.cpp
+    test_checkfilecheckbuttonpressed.cpp \
+    mock_checkbuttonpressed.cpp \
+    ../GameOfLife/board.cpp
 
 
 
@@ -54,7 +56,8 @@ HEADERS += \
     ../GameOfLife/generator.h \
     ../GameOfLife/iteratorOverCells.h \
     ../GameOfLife/rules.h \
-    ../GameOfLife/Savetofile.h
+    ../GameOfLife/Savetofile.h \
+    mock_checkbuttonpressed.h
 
 DISTFILES += \
     TesterForGameOfLife.pro.user

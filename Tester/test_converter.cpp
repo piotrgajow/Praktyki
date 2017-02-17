@@ -4,7 +4,7 @@
 
 
 
-TEST_CASE("Test to converterboolboardtostring", "[Converterboolboardtostring]")
+TEST_CASE("Check if the positions in vector give proper symbols", "[Converterboolboardtostring]")
 {
     std::vector<std::vector<bool>> TesttheBoard {{0,0,0,0},
                                                  {0,1,1,0},
@@ -19,10 +19,11 @@ TEST_CASE("Test to converterboolboardtostring", "[Converterboolboardtostring]")
  CHECK(converter->convertBoolBoardToString(TesttheBoard)[3]=='.');
  CHECK(converter->convertBoolBoardToString(TesttheBoard)[4]=='x');
  CHECK(converter->convertBoolBoardToString(TesttheBoard)[5]=='\n');
- TesttheBoard.clear();
+
+    delete converter;
 }
 
-TEST_CASE("Test to Converterboolboardtostring check size of string", "[Converterboolboardtostring]")
+TEST_CASE("Check if conversation of TesttheBoard gives proper size of the string", "[Converterboolboardtostring]")
 {
     std::vector<std::vector<bool>> TesttheBoard {{0,0,0,0},
                                                  {0,1,1,0},
@@ -31,5 +32,6 @@ TEST_CASE("Test to Converterboolboardtostring check size of string", "[Converter
 
   ConverterBoolBoardToString *converter=new ConverterBoolBoardToString;
   CHECK(converter->convertBoolBoardToString(TesttheBoard).size()== 6);
-  TesttheBoard.clear();
+
+    delete converter;
 }

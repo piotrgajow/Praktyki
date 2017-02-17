@@ -4,7 +4,7 @@
 #include "../GameOfLife/filler.h"
 
 
-TEST_CASE( "test to filleremptyboard", "[FillerEmptyBoard]" ) {
+TEST_CASE( "Check if the board on each position has zero ", "[FillerEmptyBoard]" ) {
 
 FillerEmptyBoard filleremptyboard;
 Board board;
@@ -18,6 +18,3 @@ for(unsigned positionLine = 0 ; positionLine < board.getTheBoard().size() ; posi
     }
 }
 }
-
-
-

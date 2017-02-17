@@ -4,8 +4,7 @@
 #include "..\GameOfLife\filler.h"
 
 
-
-TEST_CASE( "test to fillerwithrandomvalues top frame", "[FillerWithRandomValues]" ) {
+TEST_CASE( "Check if top border of frame is filled with zero", "[FillerWithRandomValues]" ) {
 
 FillerWithRandomValues fillerWithRandomValues;
 Board board;
@@ -17,7 +16,8 @@ for(unsigned positionColumn =0; positionColumn < board.getTheBoard()[0].size();p
 }
 }
 
-TEST_CASE( "test to fillerwithrandomvalues left frame", "[FillerWithRandomValues]" ) {
+
+TEST_CASE( "Check if left border of frame is filled with zero", "[FillerWithRandomValues]" ) {
 
 FillerWithRandomValues fillerWithRandomValues;
 Board board;
@@ -29,7 +29,8 @@ for(unsigned positionLine = 0 ; positionLine < board.getTheBoard().size() ; posi
 }
 }
 
-TEST_CASE( "test to fillerwithrandomvalues bottom frame", "[FillerWithRandomValues]" ) {
+
+TEST_CASE( "Check if bottom border of frame is filled with zero", "[FillerWithRandomValues]" ) {
 
 FillerWithRandomValues fillerWithRandomValues;
 Board board;
@@ -41,7 +42,8 @@ for(unsigned positionColumn =0; positionColumn < board.getTheBoard()[0].size();p
 }
 }
 
-TEST_CASE( "test to fillerwithrandomvalues right frame", "[FillerWithRandomValues]" ) {
+
+TEST_CASE( "Check if right border of frame is filled with zero", "[FillerWithRandomValues]" ) {
 
 FillerWithRandomValues fillerWithRandomValues;
 Board board;
@@ -53,7 +55,8 @@ for(unsigned positionLine = 0 ; positionLine < board.getTheBoard().size() ; posi
 }
 }
 
-TEST_CASE( "test to fillerwithrandomvalues board without frame", "[FillerWithRandomValues]" ) {
+
+TEST_CASE( "Check if values in the board are no higher than 1", "[FillerWithRandomValues]" ) {
 
 FillerWithRandomValues fillerWithRandomValues;
 Board board;
@@ -67,4 +70,3 @@ for(unsigned positionLine = 1 ; positionLine < board.getTheBoard().size()-1 ; po
     }
 }
 }
-
