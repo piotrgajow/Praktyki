@@ -23,7 +23,8 @@ SOURCES += main.cpp \
     converterboolboardtostring.cpp \
     displaygameboardonthecommandline.cpp \
     checkbuttonpressed.cpp \
-    board.cpp
+    board.cpp \
+    systemcomand.cpp
 
 
 # The following define makes your compiler emit warnings if you use
@@ -49,7 +50,8 @@ HEADERS += Game.h \
     fillerwithrandomvalues.h \
     converterboolboardtostring.h \
     displaygameboardonthecommandline.h \
-    checkbuttonpressed.h
+    checkbuttonpressed.h \
+    systemcomand.h
 
 DISTFILES += \
     GameOfLife.pro.user \

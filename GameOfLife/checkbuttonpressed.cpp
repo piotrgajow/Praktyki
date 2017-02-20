@@ -13,25 +13,27 @@ int CheckButtonPressed::getHowManySec()
 
 void CheckButtonPressed::checkStatusOfButtonPressed()
 {
-    if(GetKeyState(VK_SPACE))
+    if(GetAsyncKeyState(VK_ESCAPE))
+        {
+            exit(0);
+        }
+    else if(GetKeyState(VK_SPACE))
     {
         loopStatus = !loopStatus;
         Sleep(100);
     }
-    else if(GetAsyncKeyState(VK_OEM_PLUS))
+    else if(GetAsyncKeyState(VK_ADD))
     {
-        howManySec+=1;
-        std::cout<<"add "<<howManySec;
+        howManySec*=2;
+        std::cout<<howManySec;
     }
-    else if(GetAsyncKeyState(VK_OEM_MINUS))
+    else if(GetAsyncKeyState(VK_DIVIDE))
     {
-        if (howManySec != 0)
-        {
-        howManySec-=1;
-        }
-        std::cout<<"del "<<howManySec;
+        howManySec/=2;
+        std::cout<<howManySec;
     }
 }
+
 
 bool CheckButtonPressed::getStatusOfLoop()
 {

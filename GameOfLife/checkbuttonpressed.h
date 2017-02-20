@@ -9,7 +9,7 @@ class CheckButtonPressed
 {
 private:
     bool loopStatus;
-    int howManySec;
+    float howManySec;
 public:
     CheckButtonPressed();
     void checkStatusOfButtonPressed();

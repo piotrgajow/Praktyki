@@ -6,6 +6,7 @@
 #include "displaygameboardonthecommandline.h"
 #include "generator.h"
 #include "checkbuttonpressed.h"
+#include "systemcomand.h"
 #include <conio.h>
 
 class Game
@@ -22,6 +23,7 @@ private:
     DisplayGameBoardOnTheCommandLine display;
     Converter converter;
     Generator generator;
+    systemComand comand;
     void startInfiniteLoop();
 };
 
