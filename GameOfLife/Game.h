@@ -13,8 +13,6 @@ class Game
 {
 public:
     Game();
-
-    void sleepFunction(int howManySec);
     
 private:
     Board board;
