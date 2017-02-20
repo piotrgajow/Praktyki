@@ -4,11 +4,11 @@
 #include <string>
 #include <iostream>
 #include <stdio.h>
-class SaveTofile
+class SaveToFileWithNameAndText
 {
 public:
-    SaveTofile();
-    SaveTofile(std::string,std::string);
+    SaveToFileWithNameAndText();
+    SaveToFileWithNameAndText(std::string,std::string);
 
 };
 

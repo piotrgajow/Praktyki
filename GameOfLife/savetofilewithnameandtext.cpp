@@ -1,8 +1,8 @@
-#include "Savetofile.h"
+#include "savetofilewithnameandtext.h"
 
 
 
-SaveTofile::SaveTofile(std::string fileName, std::string text)
+SaveToFileWithNameAndText::SaveToFileWithNameAndText(std::string fileName, std::string text)
 {
         std::fstream file (fileName, std::ios::in | std::ios::out);
         if (file.good())

@@ -2,7 +2,7 @@
 #define GAME_H
 #include "board.h"
 #include "fillerwithrandomvalues.h"
-#include "converterboolboardtostring.h"
+#include "converter.h"
 #include "displaygameboardonthecommandline.h"
 #include "generator.h"
 #include "checkbuttonpressed.h"
