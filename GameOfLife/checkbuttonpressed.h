@@ -17,6 +17,7 @@ public:
     bool getStatusOfLoop();
     int getHowManySec();
     bool getSaveToFileStatus();
+    void setSaveToFileStatus(bool value);
 };
 
 #endif

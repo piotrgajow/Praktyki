@@ -5,6 +5,11 @@ bool CheckButtonPressed::getSaveToFileStatus()
     return saveToFileStatus;
 }
 
+void CheckButtonPressed::setSaveToFileStatus(bool value)
+{
+    saveToFileStatus = value;
+}
+
 CheckButtonPressed::CheckButtonPressed()
 {
     loopStatus = false;

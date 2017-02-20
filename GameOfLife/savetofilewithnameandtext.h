@@ -1,14 +1,20 @@
 #ifndef SAVETOFILE_H
 #define SAVETOFILE_H
 #include <fstream>
-#include <string>
 #include <iostream>
 #include <stdio.h>
+#include <sys/stat.h>
+#include <unistd.h>
+
 class SaveToFileWithNameAndText
 {
+private:
+    std::string fileName;
+    void askUserFileName();
+
 public:
     SaveToFileWithNameAndText();
-    void saveFile(std::string, std::string);
+    void saveFile(std::string);
 
 };
 
