@@ -15,15 +15,15 @@ void Game::startInfiniteLoop()
         do
         {
             comand.cleanFunction();
+            if (newPressed.getSaveToFileStatus() == true)
+            {
+                saveToFile.saveFile("table.txt",converter.getBoardConvertToString());
+            }
             converter.convertBoolBoardToString((board.getTheBoard()));
             display.displayGameBoardOnTheCommandLine(converter.getBoardConvertToString());
             board = generator.generateNextBoard(board);
             newPressed.checkStatusOfButtonPressed();
             comand.sleepFunction(newPressed.getStatusOfLoop(),newPressed.getHowManySec());
-            if (newPressed.getSaveToFileStatus() == true)
-            {
-                saveToFile.saveFile("table.txt",converter.getBoardConvertToString());
-            }
         }
         while (newPressed.getStatusOfLoop() == true);
         comand.systemPause();
