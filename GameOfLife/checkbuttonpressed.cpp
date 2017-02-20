@@ -17,7 +17,7 @@ void CheckButtonPressed::checkStatusOfButtonPressed()
         {
             exit(0);
         }
-    else if(GetKeyState(VK_SPACE))
+    else if(GetAsyncKeyState(VK_SPACE))
     {
         loopStatus = !loopStatus;
         Sleep(100);
@@ -27,7 +27,7 @@ void CheckButtonPressed::checkStatusOfButtonPressed()
         howManySec*=2;
         std::cout<<howManySec;
     }
-    else if(GetAsyncKeyState(VK_DIVIDE))
+    else if(GetAsyncKeyState(0x6D))
     {
         howManySec/=2;
         std::cout<<howManySec;
