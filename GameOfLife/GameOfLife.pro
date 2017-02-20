@@ -12,7 +12,6 @@ TEMPLATE = app
 
 SOURCES += main.cpp \
     game.cpp \
-    savetofile.cpp \
     generator.cpp \
     iteratorOverCells.cpp \
     counterofneighbours.cpp \
@@ -20,10 +19,11 @@ SOURCES += main.cpp \
     filler.cpp \
     filleremptyboard.cpp \
     fillerwithrandomvalues.cpp \
-    converterboolboardtostring.cpp \
     displaygameboardonthecommandline.cpp \
     checkbuttonpressed.cpp \
-    board.cpp
+    board.cpp \
+    savetofilewithnameandtext.cpp \
+    converter.cpp
 
 
 # The following define makes your compiler emit warnings if you use
@@ -38,7 +38,6 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 HEADERS += Game.h \
-    Savetofile.h \
     generator.h \
     iteratorOverCells.h \
     counterofneighbours.h \
@@ -47,9 +46,10 @@ HEADERS += Game.h \
     filler.h \
     filleremptyboard.h \
     fillerwithrandomvalues.h \
-    converterboolboardtostring.h \
     displaygameboardonthecommandline.h \
-    checkbuttonpressed.h
+    checkbuttonpressed.h \
+    savetofilewithnameandtext.h \
+    converter.h
 
 DISTFILES += \
     GameOfLife.pro.user \
