@@ -14,7 +14,7 @@ SOURCES += \
     test_filleremptyboard.cpp \
     test_generator.cpp \
     ../GameOfLife/checkbuttonpressed.cpp \
-    ../GameOfLife/converterboolboardtostring.cpp \
+    ../GameOfLife/converter.cpp \
     ../GameOfLife/counterofneighbours.cpp \
     ../GameOfLife/displaygameboardonthecommandline.cpp \
     ../GameOfLife/filler.cpp \
@@ -24,7 +24,7 @@ SOURCES += \
     ../GameOfLife/generator.cpp \
     ../GameOfLife/iteratorOverCells.cpp \
     ../GameOfLife/rules.cpp \
-    ../GameOfLife/savetofile.cpp \
+    ../GameOfLife/savetofilewithnameandtext.cpp \
     test_checkfilecheckbuttonpressed.cpp \
     mock_checkbuttonpressed.cpp \
     ../GameOfLife/board.cpp \
@@ -48,7 +48,7 @@ HEADERS += \
     Tester_Catch.h \
     ../GameOfLife/board.h \
     ../GameOfLife/checkbuttonpressed.h \
-    ../GameOfLife/converterboolboardtostring.h \
+    ../GameOfLife/converter.h \
     ../GameOfLife/counterofneighbours.h \
     ../GameOfLife/displaygameboardonthecommandline.h \
     ../GameOfLife/filler.h \
@@ -58,7 +58,7 @@ HEADERS += \
     ../GameOfLife/generator.h \
     ../GameOfLife/iteratorOverCells.h \
     ../GameOfLife/rules.h \
-    ../GameOfLife/Savetofile.h \
+    ../GameOfLife/savetofilewithnameandtext.h \
     mock_checkbuttonpressed.h
 
 DISTFILES += \
