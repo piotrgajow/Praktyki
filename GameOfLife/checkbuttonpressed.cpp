@@ -2,19 +2,34 @@
 
 CheckButtonPressed::CheckButtonPressed()
 {
-   loopStatus = false;
+    loopStatus = false;
+    howManySec = 1;
+}
+
+int CheckButtonPressed::getHowManySec()
+{
+    return howManySec;
 }
 
 void CheckButtonPressed::checkStatusOfButtonPressed()
 {
-    if(GetAsyncKeyState(VK_ESCAPE))
-    {
-        exit(0);
-    }
-    else if(GetAsyncKeyState(VK_SPACE))
+    if(GetKeyState(VK_SPACE))
     {
         loopStatus = !loopStatus;
         Sleep(100);
+    }
+    else if(GetAsyncKeyState(VK_OEM_PLUS))
+    {
+        howManySec+=1;
+        std::cout<<"add "<<howManySec;
+    }
+    else if(GetAsyncKeyState(VK_OEM_MINUS))
+    {
+        if (howManySec != 0)
+        {
+        howManySec-=1;
+        }
+        std::cout<<"del "<<howManySec;
     }
 }
 

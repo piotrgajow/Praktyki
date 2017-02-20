@@ -7,9 +7,17 @@ filler.fillBoard(board);
 startInfiniteLoop();
 }
 
+void Game::sleepFunction(int howManySec)
+{
+    if (newPressed.getStatusOfLoop() == true)
+    {
+         Sleep(howManySec*1000);
+    }
+}
+
 void Game::startInfiniteLoop()
 {
-    while(1)
+    for(; getch() != 27; )
         {
         newPressed.checkStatusOfButtonPressed();
         do
@@ -19,9 +27,8 @@ void Game::startInfiniteLoop()
             display.displayGameBoardOnTheCommandLine(converter.getBoardConvertToString());
             board = generator.generateNextBoard(board);
             newPressed.checkStatusOfButtonPressed();
-            Sleep(1000);
+            sleepFunction(newPressed.getHowManySec());
         }
         while (newPressed.getStatusOfLoop() == true);
-        system("pause");
         }
 }

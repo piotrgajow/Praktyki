@@ -3,15 +3,18 @@
 
 #include <windows.h>
 #include <iostream>
+#include <conio.h>
 
 class CheckButtonPressed
 {
 private:
     bool loopStatus;
+    int howManySec;
 public:
     CheckButtonPressed();
     void checkStatusOfButtonPressed();
     bool getStatusOfLoop();
+    int getHowManySec();
 };
 
 #endif

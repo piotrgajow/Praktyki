@@ -5,11 +5,11 @@
 
 DisplayGameBoardOnTheCommandLine::DisplayGameBoardOnTheCommandLine()
 {
-
+coutnerOfIteration = 0;
 }
 
 void DisplayGameBoardOnTheCommandLine::displayGameBoardOnTheCommandLine(std::string stringConvertedFromBoard)
 {
         std::cout<<stringConvertedFromBoard;
-        std::cout<<"--------------------------"<<std::endl;
+        std::cout<<"---------------------------- "<<++coutnerOfIteration<<std::endl;
 }

@@ -6,12 +6,15 @@
 #include "displaygameboardonthecommandline.h"
 #include "generator.h"
 #include "checkbuttonpressed.h"
+#include <conio.h>
 
 class Game
 {
 public:
     Game();
 
+    void sleepFunction(int howManySec);
+    
 private:
     Board board;
     CheckButtonPressed newPressed;
