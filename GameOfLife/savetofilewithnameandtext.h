@@ -8,7 +8,7 @@ class SaveToFileWithNameAndText
 {
 public:
     SaveToFileWithNameAndText();
-    SaveToFileWithNameAndText(std::string,std::string);
+    void saveFile(std::string, std::string);
 
 };
 

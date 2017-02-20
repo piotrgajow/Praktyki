@@ -1,8 +1,14 @@
 #include "checkbuttonpressed.h"
 
+bool CheckButtonPressed::getSaveToFileStatus()
+{
+    return saveToFileStatus;
+}
+
 CheckButtonPressed::CheckButtonPressed()
 {
     loopStatus = false;
+    saveToFileStatus = false;
     howManySec = 1;
 }
 
@@ -27,10 +33,14 @@ void CheckButtonPressed::checkStatusOfButtonPressed()
         howManySec*=2;
         std::cout<<howManySec;
     }
-    else if(GetAsyncKeyState(0x6D))
+    else if(GetAsyncKeyState(VK_SUBTRACT))
     {
         howManySec/=2;
         std::cout<<howManySec;
+    }
+    else if(GetAsyncKeyState(VK_CONTROL) && GetAsyncKeyState(0x53))
+    {
+        saveToFileStatus = true;
     }
 }
 

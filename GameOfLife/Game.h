@@ -7,6 +7,8 @@
 #include "generator.h"
 #include "checkbuttonpressed.h"
 #include "systemcomand.h"
+#include "savetofilewithnameandtext.h"
+
 #include <conio.h>
 
 class Game
@@ -22,6 +24,7 @@ private:
     Converter converter;
     Generator generator;
     systemComand comand;
+    SaveToFileWithNameAndText saveToFile;
     void startInfiniteLoop();
 };
 

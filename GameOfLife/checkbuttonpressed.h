@@ -9,12 +9,14 @@ class CheckButtonPressed
 {
 private:
     bool loopStatus;
+    bool saveToFileStatus;
     float howManySec;
 public:
     CheckButtonPressed();
     void checkStatusOfButtonPressed();
     bool getStatusOfLoop();
     int getHowManySec();
+    bool getSaveToFileStatus();
 };
 
 #endif

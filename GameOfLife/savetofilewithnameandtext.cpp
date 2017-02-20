@@ -2,9 +2,14 @@
 
 
 
-SaveToFileWithNameAndText::SaveToFileWithNameAndText(std::string fileName, std::string text)
+SaveToFileWithNameAndText::SaveToFileWithNameAndText()
 {
-        std::fstream file (fileName, std::ios::in | std::ios::out);
+
+}
+
+void SaveToFileWithNameAndText::saveFile(std::string fileName, std::string text)
+{
+        std::ofstream file (fileName);
         if (file.good())
         {
             file << text;

@@ -10,6 +10,7 @@ private:
 public:
     DisplayGameBoardOnTheCommandLine();
     void displayGameBoardOnTheCommandLine(std::string stringConvertedFromBoard);
+    int getCoutnerOfIteration();
 };
 
 #endif // DISPLAYGAMEBOARDONTHECOMMANDLINE_H
