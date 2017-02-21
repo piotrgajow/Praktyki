@@ -10,12 +10,14 @@ class SaveToFileWithNameAndText
 {
 private:
     std::string fileName;
-    void askUserFileName();
+    bool fileExistStatus;
 
 public:
     SaveToFileWithNameAndText();
     void saveFile(std::string);
-
+    void askUserFileName();
+    void checkIfFileExist();
+    void ifFileExistAskRenameOrOverwritten();
 };
 
 #endif // SAVETOFILE_H
