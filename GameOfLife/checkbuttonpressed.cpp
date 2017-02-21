@@ -36,12 +36,10 @@ void CheckButtonPressed::checkStatusOfButtonPressed()
     else if(GetAsyncKeyState(VK_ADD))
     {
         howManySec*=2;
-        std::cout<<howManySec;
     }
     else if(GetAsyncKeyState(VK_SUBTRACT))
     {
         howManySec/=2;
-        std::cout<<howManySec;
     }
     else if(GetAsyncKeyState(VK_CONTROL) && GetAsyncKeyState(0x53))
     {
