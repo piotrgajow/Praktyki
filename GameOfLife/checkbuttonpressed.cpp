@@ -17,7 +17,7 @@ CheckButtonPressed::CheckButtonPressed()
     howManySec = 1;
 }
 
-int CheckButtonPressed::getHowManySec()
+float CheckButtonPressed::getHowManySec()
 {
     return howManySec;
 }
