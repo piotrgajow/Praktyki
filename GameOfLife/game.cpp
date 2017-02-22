@@ -1,8 +1,11 @@
 #include "Game.h"
 
+Board board;
 
 Game::Game()
 {
+board.setNumberOfRow(20);
+board.setNumberOfCollumn(50);
 filler.fillBoard(board);
 startInfiniteLoop();
 }

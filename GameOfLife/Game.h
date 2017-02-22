@@ -17,7 +17,6 @@ public:
     Game();
     
 private:
-    Board board;
     CheckButtonPressed newPressed;
     FillerWithRandomValues filler;
     DisplayGameBoardOnTheCommandLine display;
