@@ -10,7 +10,7 @@ CONFIG -= app_bundle
 TEMPLATE = app
 
 
-SOURCES += main.cpp \
+SOURCES += \
     game.cpp \
     generator.cpp \
     iteratorOverCells.cpp \
@@ -24,7 +24,8 @@ SOURCES += main.cpp \
     savetofilewithnameandtext.cpp \
     converter.cpp \
     systemcommand.cpp \
-    filenamereader.cpp
+    filenamereader.cpp \
+    main.cpp
 
 
 # The following define makes your compiler emit warnings if you use

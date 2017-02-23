@@ -4,7 +4,7 @@ Board board(20,50);
 
 Game::Game()
 {
-counterOfIteration = 0;
+counterOfIterations = 0;
 filler.fillBoard(board);
 startInfiniteLoop();
 }
@@ -24,8 +24,8 @@ void Game::startInfiniteLoop()
             }
             converter.convertBoolBoardToString((board.getTheBoard()));
             display.displayGameBoardOnTheCommandLine(converter.getBoardConvertToString());
-            display.displayCounterOnTheCommandLine(counterOfIteration);
-            counterOfIteration++;
+            display.displayCounterOnTheCommandLine(counterOfIterations);
+            counterOfIterations++;
             board = generator.generateNextBoard(board);
             newPressed.checkStatusOfButtonPressed();
             command.setLoopStatus(newPressed.getStatusOfLoop());

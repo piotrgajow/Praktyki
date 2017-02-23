@@ -25,7 +25,7 @@ private:
     SystemCommand command;
     SaveToFileWithNameAndText saveToFile;
     void startInfiniteLoop();
-    int counterOfIteration;
+    int counterOfIterations;
 };
 
 #endif

@@ -7,7 +7,7 @@ class Board
 {
 private:
     std::vector<std::vector<bool>> theBoard;
-    int numberOfCollumns, numberOfRows;
+    int numberOfColumns, numberOfRows;
 
 public:
     std::vector<std::vector<bool>> getTheBoard() {return theBoard;}
@@ -16,7 +16,7 @@ public:
     void setStateOfCellInTheBoard(int positionInRow, int positionInColumn, bool newStateOfCell) {
         theBoard[positionInRow][positionInColumn] = newStateOfCell; }
     Board(int numberOfRows, int numberOfColumns);
-    int getNumberOfCollumns() const;
+    int getNumberOfColumns() const;
     int getNumberOfRows() const;
 };
 
