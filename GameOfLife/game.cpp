@@ -1,11 +1,10 @@
 #include "Game.h"
 
-Board board;
+Board board(20,50);
 
 Game::Game()
 {
-board.setNumberOfRow(20);
-board.setNumberOfCollumn(50);
+counterOfIteration = 0;
 filler.fillBoard(board);
 startInfiniteLoop();
 }
@@ -17,20 +16,23 @@ void Game::startInfiniteLoop()
         newPressed.checkStatusOfButtonPressed();
         do
         {
-            comand.cleanFunction();
+            command.cleanCommandPromptFunction();
             if (newPressed.getSaveToFileStatus() == true)
             {
-                saveToFile.saveFile(converter.getBoardConvertToString());
+                saveToFile.saveFile(board.getTheBoard());
                 newPressed.setSaveToFileStatus(false);
             }
             converter.convertBoolBoardToString((board.getTheBoard()));
             display.displayGameBoardOnTheCommandLine(converter.getBoardConvertToString());
+            display.displayCounterOnTheCommandLine(counterOfIteration);
+            counterOfIteration++;
             board = generator.generateNextBoard(board);
             newPressed.checkStatusOfButtonPressed();
-            comand.sleepFunction(newPressed.getStatusOfLoop(),newPressed.getHowManySec());
+            command.setLoopStatus(newPressed.getStatusOfLoop());
+            command.waitAsLongAsDeclaredToGenerateTheNextBoard(newPressed.getHowManySecondToGenerateNextBoard());
         }
         while (newPressed.getStatusOfLoop() == true);
-        comand.systemPause();
+        command.systemPause();
         }
-    comand.cleanFunction();
+    command.cleanCommandPromptFunction();
 }
