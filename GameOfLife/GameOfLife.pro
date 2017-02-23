@@ -17,14 +17,14 @@ SOURCES += main.cpp \
     counterofneighbours.cpp \
     rules.cpp \
     filler.cpp \
-    filleremptyboard.cpp \
     fillerwithrandomvalues.cpp \
     displaygameboardonthecommandline.cpp \
     checkbuttonpressed.cpp \
     board.cpp \
-    systemcomand.cpp \
     savetofilewithnameandtext.cpp \
-    converter.cpp
+    converter.cpp \
+    systemcommand.cpp \
+    filenamereader.cpp
 
 
 # The following define makes your compiler emit warnings if you use
@@ -45,13 +45,13 @@ HEADERS += Game.h \
     rules.h \
     board.h \
     filler.h \
-    filleremptyboard.h \
     fillerwithrandomvalues.h \
     displaygameboardonthecommandline.h \
     checkbuttonpressed.h \
-    systemcomand.h \
     savetofilewithnameandtext.h \
-    converter.h
+    converter.h \
+    systemcommand.h \
+    filenamereader.h
 
 DISTFILES += \
     GameOfLife.pro.user \

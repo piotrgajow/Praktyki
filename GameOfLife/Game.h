@@ -6,7 +6,7 @@
 #include "displaygameboardonthecommandline.h"
 #include "generator.h"
 #include "checkbuttonpressed.h"
-#include "systemcomand.h"
+#include "systemcommand.h"
 #include "savetofilewithnameandtext.h"
 
 #include <conio.h>
@@ -22,9 +22,10 @@ private:
     DisplayGameBoardOnTheCommandLine display;
     Converter converter;
     Generator generator;
-    SystemComand comand;
+    SystemCommand command;
     SaveToFileWithNameAndText saveToFile;
     void startInfiniteLoop();
+    int counterOfIteration;
 };
 
 #endif
