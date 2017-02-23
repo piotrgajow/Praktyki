@@ -1,24 +1,34 @@
-#include "systemcomand.h"
+#include "systemcommand.h"
 
-SystemComand::SystemComand()
+bool SystemCommand::getLoopStatus() const
+{
+    return loopStatus;
+}
+
+void SystemCommand::setLoopStatus(bool value)
+{
+    loopStatus = value;
+}
+
+SystemCommand::SystemCommand()
 {
 
 }
 
-void SystemComand::sleepFunction(bool loopStatus, float howManySec)
+void SystemCommand::waitAsLongAsDeclaredToGenerateTheNextBoard(float howManySecondToGenerateNextBoard)
 {
-    if (loopStatus == true)
+    if (loopStatus)
     {
-         Sleep(howManySec*1000);
+         Sleep(howManySecondToGenerateNextBoard*1000);
     }
 }
 
-void SystemComand::cleanFunction()
+void SystemCommand::cleanCommandPromptFunction()
 {
     system("cls");
 }
 
-void SystemComand::systemPause()
+void SystemCommand::systemPause()
 {
     system("pause");
 }

@@ -2,13 +2,17 @@
 #define SYSTEMCOMAND_H
 #include "checkbuttonpressed.h"
 
-class SystemComand
+class SystemCommand
 {
+private:
+    bool loopStatus;
 public:
-    SystemComand();
-    void sleepFunction(bool loopStatus, float howManySec);
-    void cleanFunction();
+    SystemCommand();
+    void waitAsLongAsDeclaredToGenerateTheNextBoard(float howManySec);
+    void cleanCommandPromptFunction();
     void systemPause();
+    bool getLoopStatus() const;
+    void setLoopStatus(bool value);
 };
 
 #endif // SYSTEMCOMAND_H
