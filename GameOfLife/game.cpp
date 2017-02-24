@@ -52,6 +52,17 @@ void Game::setBoard(const Board &value)
     board = value;
 }
 
+void Game::askForName()
+{
+    do
+    {
+        fileName.askUserAboutFileName();
+        fileName.checkIfFileExist();
+        fileName.ifFileExistAskRenameOrOverwritten();
+    }
+    while(fileName.getFileExistStatus() == true);
+}
+
 void Game::startInfiniteLoop()
 {
     while(1)
@@ -62,7 +73,8 @@ void Game::startInfiniteLoop()
             command.cleanCommandPromptFunction();
             if (newPressed.getSaveToFileStatus() == true)
             {
-                saveToFile.saveFile(board.getTheBoard());
+                askForName();
+                saveToFile.saveFile(board.getTheBoard(),fileName.getFileName());
                 newPressed.setSaveToFileStatus(false);
             }
             converter.convertBoolBoardToString((board.getTheBoard()));

@@ -11,7 +11,7 @@
 #include "readfromtxtfile.h"
 #include <conio.h>
 #include "fillwithtxtfile.h"
-
+#include "filenamereader.h"
 
 
 class Game
@@ -23,6 +23,8 @@ public:
 
     void readingFromfileTxt();
 
+    void askForName();
+
 private:
     CheckButtonPressed newPressed;
     FillerWithRandomValues filler;
@@ -32,6 +34,7 @@ private:
     SystemCommand command;
     SaveToFileWithNameAndText saveToFile;
     void startInfiniteLoop();
+    FilenameReader fileName;
     std::string fileNameToLoad;
     int counterOfIterations;
 };
