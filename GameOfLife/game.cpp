@@ -1,4 +1,4 @@
-#include "Game.h"
+#include "game.h"
 
 Board board(20,50);
 
