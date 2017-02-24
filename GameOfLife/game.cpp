@@ -1,28 +1,84 @@
-#include "Game.h"
+#include "game.h"
 
 Board board(20,50);
 
+void Game::readingFromfileTxt()
+{
+    std::cout<<fileNameToLoad<<std::endl;
+    ReadFromTxtFile reader(fileNameToLoad);
+    Board BoardFromFile(*reader.getSizeofBoard());
+    FillWithTxtFile fillerWithTxtFile;
+    fillerWithTxtFile.fillBoardWithString(BoardFromFile,reader.getReadBoard());
+    setBoard(BoardFromFile);
+
+}
+
 Game::Game()
 {
-counterOfIterations = 0;
-filler.fillBoard(board);
-startInfiniteLoop();
+    counterOfIterations = 0;
+        int yourChoice;
+        do{
+
+           std::cout << "What you want to do:\n";
+           std::cout << "1. Load board form file txt\n";
+           std::cout << "2. Load board form file image\n";
+           std::cout << "3. Generating random board\n";
+           std::cout << "0. Exit\n";
+           std::cin >> yourChoice;
+           switch( yourChoice )  {
+           case 1:
+               std::cout<<"Type file name to load: ";
+               std::cin>>fileNameToLoad;
+               readingFromfileTxt();
+               startInfiniteLoop();
+               break;
+           case 2:
+               //load board from image method
+               break;
+           case 3:
+               filler.fillBoard(board);
+               startInfiniteLoop();
+               break;
+           case 0:
+               std::cout <<"Goodbye.\n";
+               exit(1);
+               break;
+           }
+        }while (yourChoice != 0);
+}
+
+void Game::setBoard(const Board &value)
+{
+    board = value;
+}
+
+void Game::askForName()
+{
+    do
+    {
+        fileName.askUserAboutFileName();
+        fileName.checkIfFileExist();
+        fileName.ifFileExistAskRenameOrOverwritten();
+    }
+    while(fileName.getFileExistStatus() == true);
 }
 
 void Game::startInfiniteLoop()
 {
     while(1)
-        {
+    {
         newPressed.checkStatusOfButtonPressed();
         do
         {
             command.cleanCommandPromptFunction();
             if (newPressed.getSaveToFileStatus() == true)
             {
-                saveToFile.saveFile(board.getTheBoard());
+                askForName();
+                saveToFile.saveFile(board.getTheBoard(),fileName.getFileName());
                 newPressed.setSaveToFileStatus(false);
             }
             converter.convertBoolBoardToString((board.getTheBoard()));
+
             display.displayGameBoardOnTheCommandLine(converter.getBoardConvertToString());
             display.displayCounterOnTheCommandLine(counterOfIterations);
             counterOfIterations++;
