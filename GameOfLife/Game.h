@@ -8,7 +8,9 @@
 #include "checkbuttonpressed.h"
 #include "systemcommand.h"
 #include "savetofilewithnameandtext.h"
-
+#include "readerfromtxtfile.h"
+#include "validator.h"
+#include "fillerwithvaluesfromtxtfile.h"
 #include <conio.h>
 
 class Game
@@ -24,8 +26,13 @@ private:
     Generator generator;
     SystemCommand command;
     SaveToFileWithNameAndText saveToFile;
+    ReaderFromTxtFile readerFromTxtFile;
+    Validator validator;
+    FillerWithValuesFromTxtFile fillerWithValuesFromTxtFile;
+
     void startInfiniteLoop();
     int counterOfIterations;
+    std::string fileNameToLoad;
 };
 
 #endif
