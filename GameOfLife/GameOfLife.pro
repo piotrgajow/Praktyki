@@ -25,7 +25,8 @@ SOURCES += \
     converter.cpp \
     systemcommand.cpp \
     filenamereader.cpp \
-    main.cpp
+    main.cpp \
+    readerfromtxtfile.cpp
 
 
 # The following define makes your compiler emit warnings if you use
@@ -52,7 +53,8 @@ HEADERS += Game.h \
     savetofilewithnameandtext.h \
     converter.h \
     systemcommand.h \
-    filenamereader.h
+    filenamereader.h \
+    readerfromtxtfile.h
 
 DISTFILES += \
     GameOfLife.pro.user \
