@@ -2,6 +2,9 @@
 #define VALIDATOR_H
 #include <string>
 #include "size.h"
+
+int const frame = 2;
+
 class Validator
 {
 public:
