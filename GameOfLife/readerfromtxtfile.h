@@ -9,6 +9,8 @@ class ReaderFromTxtFile
 public:
     ReaderFromTxtFile();
     void readFromGivenFile(std::string);
+    std::string getReadString() const;
+
 private:
     std::string readString;
 };

@@ -12,3 +12,8 @@ void ReaderFromTxtFile::readFromGivenFile(std::string fileName)
     buffer << file.rdbuf();
     readString = buffer.str();
 }
+
+std::string ReaderFromTxtFile::getReadString() const
+{
+    return readString;
+}
