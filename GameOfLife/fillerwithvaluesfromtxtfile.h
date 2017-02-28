@@ -6,7 +6,8 @@
 class FillerWithValuesFromTxtFile
 {
 public:
-    FillerWithValuesFromTxtFile(Board&, std::string);
+    FillerWithValuesFromTxtFile();
+    fillBoardWithGivenString(Board&, std::string);
 };
 
 #endif // FILLERWITHVALUESFROMTXTFILE_H

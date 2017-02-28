@@ -1,7 +1,12 @@
 #include "fillerwithvaluesfromtxtfile.h"
 
 
-FillerWithValuesFromTxtFile::FillerWithValuesFromTxtFile(Board & board, std::__cxx11::string stringFromTxtFile)
+FillerWithValuesFromTxtFile::FillerWithValuesFromTxtFile()
+{
+
+}
+
+FillerWithValuesFromTxtFile::fillBoardWithGivenString(Board & board, std::__cxx11::string stringFromTxtFile)
 {
     std::vector<std::vector<bool>> theBoard = board.getTheBoard();
 
