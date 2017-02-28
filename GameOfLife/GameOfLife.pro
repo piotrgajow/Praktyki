@@ -26,7 +26,9 @@ SOURCES += \
     systemcommand.cpp \
     filenamereader.cpp \
     main.cpp \
-    readerfromtxtfile.cpp
+    readerfromtxtfile.cpp \
+    validator.cpp \
+    size.cpp
 
 
 # The following define makes your compiler emit warnings if you use
@@ -54,7 +56,9 @@ HEADERS += Game.h \
     converter.h \
     systemcommand.h \
     filenamereader.h \
-    readerfromtxtfile.h
+    readerfromtxtfile.h \
+    validator.h \
+    size.h
 
 DISTFILES += \
     GameOfLife.pro.user \
