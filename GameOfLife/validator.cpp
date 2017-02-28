@@ -19,6 +19,11 @@ Size Validator::getSizeOfBoard() const
     return *sizeOfBoard;
 }
 
+std::string Validator::getErrorMessage() const
+{
+    return errorMessage;
+}
+
 bool Validator::validate(std::__cxx11::string readString)
 {
     int lineCounter = 0;
@@ -37,9 +42,12 @@ bool Validator::validate(std::__cxx11::string readString)
                 return false;
             }
             bufferLineWidth = 0;
+            lineCounter++;
         }
-        lineCounter++;
     }
+    lineWidth--;
+    lineCounter++;
     sizeOfBoard = new Size(lineWidth+frame,lineCounter+frame);
+
     return true;
 }

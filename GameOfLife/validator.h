@@ -14,6 +14,8 @@ public:
 
     Size getSizeOfBoard() const;
 
+    std::string getErrorMessage() const;
+
 private:
     Size * sizeOfBoard;
     std::string errorMessage;
