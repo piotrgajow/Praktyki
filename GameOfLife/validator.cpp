@@ -40,6 +40,6 @@ bool Validator::validate(std::__cxx11::string readString)
         }
         lineCounter++;
     }
-    sizeOfBoard = new Size(lineWidth,lineCounter);
+    sizeOfBoard = new Size(lineWidth+frame,lineCounter+frame);
     return true;
 }
