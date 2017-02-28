@@ -16,3 +16,10 @@ Board::Board(int newNumberOfRows, int newNumberColumns)
     numberOfRows = newNumberOfRows;
     this->theBoard.resize(numberOfRows, std::vector<bool>(numberOfColumns));
 }
+
+Board::Board(Size size)
+{
+    numberOfColumns = size.getWidth();
+    numberOfRows = size.getHeight();
+    this->theBoard.resize(numberOfRows, std::vector<bool>(numberOfColumns));
+}
