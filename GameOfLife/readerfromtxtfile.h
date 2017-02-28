@@ -7,7 +7,8 @@
 class ReaderFromTxtFile
 {
 public:
-    ReaderFromTxtFile(std::string);
+    ReaderFromTxtFile();
+    void readFromGivenFile(std::string);
 private:
     std::string readString;
 };

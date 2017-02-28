@@ -1,6 +1,11 @@
 #include "readerfromtxtfile.h"
 
-ReaderFromTxtFile::ReaderFromTxtFile(std::string fileName)
+ReaderFromTxtFile::ReaderFromTxtFile()
+{
+
+}
+
+void ReaderFromTxtFile::readFromGivenFile(std::string fileName)
 {
     std::ifstream file(fileName);
     std::stringstream buffer;
