@@ -23,7 +23,7 @@ void Game::startInfiniteLoop()
                 newPressed.setSaveToFileStatus(false);
             }
             converter.convertBoolBoardToString((board.getTheBoard()));
-            display.displayGameBoardOnTheCommandLine(converter.getBoardConvertToString());
+            display.displayGameBoardOnTheCommandLine(converter.getBoardConvertToString(),board.getNumberOfColumns());
             display.displayCounterOnTheCommandLine(counterOfIterations);
             counterOfIterations++;
             board = generator.generateNextBoard(board);

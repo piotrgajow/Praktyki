@@ -7,7 +7,7 @@ class DisplayGameBoardOnTheCommandLine
 {
 public:
     DisplayGameBoardOnTheCommandLine();
-    void displayGameBoardOnTheCommandLine(std::string stringConvertedFromBoard);
+    void displayGameBoardOnTheCommandLine(std::string stringConvertedFromBoard, int lengthBoardWidth);
     void displayCounterOnTheCommandLine(int counterOfIterations);
 };
 
