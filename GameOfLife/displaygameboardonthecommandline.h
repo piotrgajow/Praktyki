@@ -9,6 +9,7 @@ public:
     DisplayGameBoardOnTheCommandLine();
     void displayGameBoardOnTheCommandLine(std::string stringConvertedFromBoard);
     void displayCounterOnTheCommandLine(int counterOfIterations);
+    void displayErrorsCommand(std::string);
 };
 
 #endif // DISPLAYGAMEBOARDONTHECOMMANDLINE_H

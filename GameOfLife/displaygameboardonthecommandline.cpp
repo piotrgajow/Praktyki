@@ -13,5 +13,10 @@ void DisplayGameBoardOnTheCommandLine::displayGameBoardOnTheCommandLine(std::str
 
 void DisplayGameBoardOnTheCommandLine::displayCounterOnTheCommandLine(int counterOfIterations)
 {
-        std::cout<<counterOfIterations<<std::endl;
+    std::cout<<counterOfIterations<<std::endl;
+}
+
+void DisplayGameBoardOnTheCommandLine::displayErrorsCommand(std::__cxx11::string error)
+{
+    std::cout<<error<<std::endl;
 }
