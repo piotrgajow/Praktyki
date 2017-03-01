@@ -29,7 +29,12 @@ SOURCES += \
     test_converter.cpp \
     test_fillerwithrandomvalues.cpp \
     ../GameOfLife/filenamereader.cpp \
-    ../GameOfLife/systemcommand.cpp
+    ../GameOfLife/systemcommand.cpp \
+    test_readerfromtxtfile.cpp \
+    ../GameOfLife/fillerwithvaluesfromtxtfile.cpp \
+    ../GameOfLife/readerfromtxtfile.cpp \
+    ../GameOfLife/size.cpp \
+    ../GameOfLife/validator.cpp
 
 
 
@@ -60,7 +65,11 @@ HEADERS += \
     ../GameOfLife/savetofilewithnameandtext.h \
     mock_checkbuttonpressed.h \
     ../GameOfLife/filenamereader.h \
-    ../GameOfLife/systemcommand.h
+    ../GameOfLife/systemcommand.h \
+    ../GameOfLife/readerfromtxtfile.h \
+    ../GameOfLife/fillerwithvaluesfromtxtfile.h \
+    ../GameOfLife/size.h \
+    ../GameOfLife/validator.h
 
 DISTFILES += \
     TesterForGameOfLife.pro.user \
