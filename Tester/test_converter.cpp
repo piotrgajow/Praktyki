@@ -10,7 +10,7 @@ TEST_CASE("Check if the positions in vector give proper symbols", "[Converter]")
                                                  {0,0,1,0},
                                                  {0,0,0,0}};
 
-    std::string testString  = {'x','x','\n','.','x','\n'};
+    std::string testString  = {'X','X','\n',' ','X','\n'};
 
 
 Converter *converter=new Converter;

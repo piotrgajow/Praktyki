@@ -12,7 +12,7 @@ public:
 
 private:
 
-      char deadCell='.', liveCell='x';
+      char deadCell=' ', liveCell='X';
       std::string boardConvertToString;
 };
 
