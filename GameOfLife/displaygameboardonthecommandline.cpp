@@ -7,8 +7,8 @@ DisplayGameBoardOnTheCommandLine::DisplayGameBoardOnTheCommandLine()
 
 void DisplayGameBoardOnTheCommandLine::displayGameBoardOnTheCommandLine(std::string stringConvertedFromBoard)
 {
-        std::cout<<stringConvertedFromBoard;
-        std::cout<<"---------------------------- ";
+    std::cout<<stringConvertedFromBoard;
+    std::cout<<"---------------------------- ";
 }
 
 void DisplayGameBoardOnTheCommandLine::displayCounterOnTheCommandLine(int counterOfIterations)

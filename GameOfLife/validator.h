@@ -11,9 +11,7 @@ public:
     Validator();
     bool validate(std::string);
     void CouterOfFirstLineWidth(std::__cxx11::string readString, int &lineWidth);
-
     Size getSizeOfBoard() const;
-
     std::string getErrorMessage() const;
 
 private:

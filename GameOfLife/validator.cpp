@@ -33,7 +33,6 @@ bool Validator::validate(std::__cxx11::string readString)
     for(unsigned i = 0; i< readString.size();i++)
     {
         bufferLineWidth++;
-
         if(readString[i] == '\n' )
         {
             if(lineWidth != bufferLineWidth)
@@ -48,6 +47,5 @@ bool Validator::validate(std::__cxx11::string readString)
     lineWidth--;
     lineCounter++;
     sizeOfBoard = new Size(lineWidth+frame,lineCounter+frame);
-
     return true;
 }
