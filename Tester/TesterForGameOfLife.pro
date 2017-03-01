@@ -35,7 +35,8 @@ SOURCES += \
     ../GameOfLife/readerfromtxtfile.cpp \
     ../GameOfLife/size.cpp \
     ../GameOfLife/validator.cpp \
-    test_validator.cpp
+    test_validator.cpp \
+    test_fillerwithvaluesfromtxtfile.cpp
 
 
 
