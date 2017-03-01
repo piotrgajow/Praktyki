@@ -10,3 +10,11 @@ TEST_CASE("check if Validator properly counts number of symbols in given string"
     validator.CouterOfFirstLineWidth(givenString,numberOfSymbols);
     REQUIRE(numberOfSymbols == 29);
 }
+
+TEST_CASE("check if Validator will find error in line 1", "[test_validator]")
+{
+    Validator validator;
+    std::string readFromTxtFile = "XXXX\nXXX\nXXXX";
+    validator.validate(readFromTxtFile);
+    REQUIRE(validator.getErrorMessage() == "Error in line: 1");
+}
