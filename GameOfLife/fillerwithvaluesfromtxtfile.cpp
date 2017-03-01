@@ -15,14 +15,13 @@ void FillerWithValuesFromTxtFile::fillBoardWithGivenString(Board & board, std::_
     {
         for (int column=1; column<board.getTheBoard()[0].size(); column++)
         {
-            std::cout<<positionInString<<": "<<stringFromTxtFile[positionInString]<<std::endl;
+
             if(stringFromTxtFile[positionInString] != '\n')
             {
                 stringFromTxtFile[positionInString] == 'X' ? theBoard[row][column] = true : theBoard[row][column] = false;
                 positionInString++;
             }
             else positionInString+=1;
-
         }
     }
     board.setStateOfBoard(theBoard);
