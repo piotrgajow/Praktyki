@@ -30,10 +30,10 @@ bool Validator::validate(std::__cxx11::string readString)
     int lineWidth = 0;
     int bufferLineWidth = 0;
     CouterOfFirstLineWidth(readString, lineWidth);
-    for(unsigned i = 0; i< readString.size();i++)
+    for(unsigned numberOfSymbolFromReadString = 0; numberOfSymbolFromReadString< readString.size();numberOfSymbolFromReadString++)
     {
         bufferLineWidth++;
-        if(readString[i] == '\n' )
+        if(readString[numberOfSymbolFromReadString] == '\n' )
         {
             if(lineWidth != bufferLineWidth)
             {
