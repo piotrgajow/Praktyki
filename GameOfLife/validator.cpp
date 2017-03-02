@@ -7,10 +7,10 @@ Validator::Validator()
 
 void Validator::CouterOfFirstLineWidth(std::__cxx11::string readString, int &lineWidth)
 {
-    for(unsigned i = 0; i< readString.size();i++)
+    for(unsigned numberOfSymbolFromReadString = 0; numberOfSymbolFromReadString< readString.size();numberOfSymbolFromReadString++)
     {
         lineWidth++;
-        if(readString[i] == '\n' ) break;
+        if(readString[numberOfSymbolFromReadString] == '\n' ) break;
     }
 }
 
