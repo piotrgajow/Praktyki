@@ -21,4 +21,4 @@ public:
     void ifFileExistAskRenameOrOverwritten();
 };
 
-#endif // SAVETOFILE_H
+#endif

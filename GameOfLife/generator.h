@@ -11,4 +11,4 @@ public:
     Board generateNextBoard(Board oldBoard);
 };
 
-#endif // GENERATOR_H
+#endif

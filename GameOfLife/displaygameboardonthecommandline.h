@@ -12,4 +12,4 @@ public:
     void displayErrorsCommand(std::string);
 };
 
-#endif // DISPLAYGAMEBOARDONTHECOMMANDLINE_H
+#endif

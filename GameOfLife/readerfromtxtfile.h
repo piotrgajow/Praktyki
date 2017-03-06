@@ -15,4 +15,4 @@ private:
     std::string readString;
 };
 
-#endif // READERFROMTXTFILE_H
+#endif

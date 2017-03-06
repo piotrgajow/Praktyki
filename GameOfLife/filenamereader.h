@@ -13,4 +13,4 @@ public:
     std::string getFileName() const;
 };
 
-#endif // FILENAMEREADER_H
+#endif
