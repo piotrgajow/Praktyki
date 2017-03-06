@@ -6,6 +6,7 @@
 #include "displaygameboardonthecommandline.h"
 #include "generator.h"
 #include "checkbuttonpressed.h"
+#include "buttonsClass/userinteractionviakeyboard.h"
 #include "systemcommand.h"
 #include "savetofilewithnameandtext.h"
 
@@ -17,7 +18,7 @@ public:
     Game();
     
 private:
-    CheckButtonPressed newPressed;
+    CheckButtonPressed button;
     FillerWithRandomValues filler;
     DisplayGameBoardOnTheCommandLine display;
     Converter converter;

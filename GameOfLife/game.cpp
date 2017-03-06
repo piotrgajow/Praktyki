@@ -13,25 +13,25 @@ void Game::startInfiniteLoop()
 {
     while(1)
         {
-        newPressed.checkStatusOfButtonPressed();
+        button.checkWhatButtonWasPressed();
         do
         {
             command.cleanCommandPromptFunction();
-            if (newPressed.getSaveToFileStatus() == true)
+            if (button.getControlWithSKey().getSaveToFileStatus() == true)
             {
                 saveToFile.saveFile(board.getTheBoard());
-                newPressed.setSaveToFileStatus(false);
+                button.getControlWithSKey().setSaveToFileStatus(false);
             }
             converter.convertBoolBoardToString((board.getTheBoard()));
             display.displayGameBoardOnTheCommandLine(converter.getBoardConvertToString(),board.getNumberOfColumns());
             display.displayCounterOnTheCommandLine(counterOfIterations);
             counterOfIterations++;
             board = generator.generateNextBoard(board);
-            newPressed.checkStatusOfButtonPressed();
-            command.setLoopStatus(newPressed.getStatusOfLoop());
-            command.waitAsLongAsDeclaredToGenerateTheNextBoard(newPressed.getHowManySecondToGenerateNextBoard());
+            button.checkWhatButtonWasPressed();
+            command.setLoopStatus(button.getSpace().getLoopStatus());
+            command.waitAsLongAsDeclaredToGenerateTheNextBoard(button.getMinusOrPlus().getHowManySecondToGenerateNextBoard());
         }
-        while (newPressed.getStatusOfLoop() == true);
+        while (button.getSpace().getLoopStatus() == true);
         command.systemPause();
         }
     command.cleanCommandPromptFunction();
