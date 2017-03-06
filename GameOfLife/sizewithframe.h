@@ -1,19 +1,24 @@
 #ifndef SIZE_H
 #define SIZE_H
+#include <string>
+#include <iostream>
+#include <sstream>
 
+int const frame = 2;
 
-class Size
+class SizeWithFrame
 {
 public:
-    Size(int,int);
+    SizeWithFrame(int,int);
+    SizeWithFrame(std::string stringBoard);
     int getHeight() const;
     int getWidth() const;
+    int counterOfLineWidth(std::string);
+    int counterOfBoardHeight(std::string);
+
 private:
     int height;
-    void setHeight(int value);
     int width;
-    void setWidth(int value);
-
 };
 
-#endif // SIZE_H
+#endif

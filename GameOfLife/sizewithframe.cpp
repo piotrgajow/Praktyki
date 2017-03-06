@@ -1,27 +1,47 @@
-#include "size.h"
+#include "sizewithframe.h"
 
-Size::Size(int width,int height)
+SizeWithFrame::SizeWithFrame(int newWidth,int newHeight)
 {    
-    setHeight(height);
-    setWidth(width);
+    height = newHeight;
+    width = newWidth;
 }
 
-int Size::getHeight() const
+int SizeWithFrame::counterOfLineWidth(std::string readString)
+{
+    int lineWidth = 0;
+    for(unsigned numberOfSymbolFromReadString = 0;
+        numberOfSymbolFromReadString< readString.size();
+        numberOfSymbolFromReadString++)
+    {
+        if(readString[numberOfSymbolFromReadString] == '\n' ) break;
+        lineWidth++;
+    }
+    return lineWidth;
+}
+
+int SizeWithFrame::counterOfBoardHeight(std::__cxx11::string readString)
+{
+    std::istringstream streamReadString(readString);
+    std::string token;
+    int lineCounter = 0;
+    for (readString; std::getline(streamReadString, token); ) {
+        lineCounter ++;
+    }
+    return lineCounter;
+}
+
+SizeWithFrame::SizeWithFrame(std::__cxx11::string stringBoard)
+{
+    width = counterOfLineWidth(stringBoard) + frame;
+    height = counterOfBoardHeight(stringBoard) + frame;
+}
+
+int SizeWithFrame::getHeight() const
 {
     return height;
 }
 
-void Size::setHeight(int value)
-{
-    height = value;
-}
-
-int Size::getWidth() const
+int SizeWithFrame::getWidth() const
 {
     return width;
-}
-
-void Size::setWidth(int value)
-{
-    width = value;
 }
