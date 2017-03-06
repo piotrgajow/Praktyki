@@ -1,54 +1,45 @@
 #include "checkbuttonpressed.h"
 
-bool CheckButtonPressed::getSaveToFileStatus()
+
+PressedButtonIsControlWithSKey CheckButtonPressed::getControlWithSKey() const
 {
-    return saveToFileStatus;
+    return controlWithSKey;
 }
 
-void CheckButtonPressed::setSaveToFileStatus(bool value)
+PressedButtonIsMinusOrPlus CheckButtonPressed::getMinusOrPlus() const
 {
-    saveToFileStatus = value;
+    return minusOrPlus;
 }
 
 CheckButtonPressed::CheckButtonPressed()
 {
-    loopStatus = false;
-    saveToFileStatus = false;
-    howManySecondToGenerateNextBoard = 1;
+
 }
 
-float CheckButtonPressed::getHowManySecondToGenerateNextBoard()
+void CheckButtonPressed::checkWhatButtonWasPressed()
 {
-    return howManySecondToGenerateNextBoard;
-}
-
-void CheckButtonPressed::checkStatusOfButtonPressed()
-{
-    if(GetAsyncKeyState(VK_ESCAPE))
-        {
-            exit(0);
-        }
-    else if(GetAsyncKeyState(VK_SPACE))
+    if (GetAsyncKeyState(VK_SPACE))
     {
-        loopStatus = !loopStatus;
         Sleep(100);
+        keyIsPressed = &space;
     }
-    else if(GetAsyncKeyState(VK_ADD))
+    else if (GetAsyncKeyState(VK_ESCAPE))
+        keyIsPressed = &esc;
+
+    else if (GetAsyncKeyState(VK_SUBTRACT) || GetAsyncKeyState(VK_ADD))
     {
-        howManySecondToGenerateNextBoard*=2;
+        keyIsPressed = &minusOrPlus;
     }
-    else if(GetAsyncKeyState(VK_SUBTRACT))
-    {
-        howManySecondToGenerateNextBoard/=2;
-    }
-    else if(GetAsyncKeyState(VK_CONTROL) && GetAsyncKeyState(0x53))
-    {
-        saveToFileStatus = true;
-    }
+    else if (GetAsyncKeyState(VK_CONTROL) && GetAsyncKeyState(0x53))
+        keyIsPressed = &controlWithSKey;
+
+    else
+        keyIsPressed = &other;
+
+    keyIsPressed->actButtonPressed();
 }
 
-
-bool CheckButtonPressed::getStatusOfLoop()
+PressedButtonIsSpace CheckButtonPressed::getSpace() const
 {
-    return loopStatus;
+    return space;
 }
