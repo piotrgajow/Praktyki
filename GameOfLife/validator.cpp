@@ -5,7 +5,7 @@ Validator::Validator()
 
 }
 
-void Validator::CouterOfFirstLineWidth(std::__cxx11::string readString, int &lineWidth)
+void Validator::couterOfFirstLineWidth(std::__cxx11::string readString, int &lineWidth)
 {
     for(unsigned numberOfSymbolFromReadString = 0; numberOfSymbolFromReadString< readString.size();numberOfSymbolFromReadString++)
     {
@@ -14,38 +14,38 @@ void Validator::CouterOfFirstLineWidth(std::__cxx11::string readString, int &lin
     }
 }
 
-Size Validator::getSizeOfBoard() const
-{
-    return *sizeOfBoard;
-}
-
 std::string Validator::getErrorMessage() const
 {
     return errorMessage;
 }
 
-bool Validator::validate(std::__cxx11::string readString)
+bool Validator::validateIfStringHasAllLinesEqual(std::__cxx11::string readString)
 {
+    errorMessage = "";
+    std::istringstream streamReadString(readString);
+    std::string token;
     int lineCounter = 0;
     int lineWidth = 0;
     int bufferLineWidth = 0;
-    CouterOfFirstLineWidth(readString, lineWidth);
-    for(unsigned numberOfSymbolFromReadString = 0; numberOfSymbolFromReadString< readString.size();numberOfSymbolFromReadString++)
-    {
-        bufferLineWidth++;
-        if(readString[numberOfSymbolFromReadString] == '\n' )
+    couterOfFirstLineWidth(readString, lineWidth);
+    for (readString; std::getline(streamReadString, token); ) {
+        if (bufferLineWidth == 0 )
         {
-            if(lineWidth != bufferLineWidth)
-            {
-                errorMessage = "Error in line: " + std::to_string(lineCounter);
-                return false;
-            }
-            bufferLineWidth = 0;
-            lineCounter++;
+            bufferLineWidth = token.size();
+
         }
+        if (bufferLineWidth != token.size())
+        {
+            errorMessage = "Lines must have this same lenght. \nLenght of lines: \n";
+        }
+        lenghtOfLines += std::to_string(lineCounter) + ": " + std::to_string(token.size()) +"\n";
+        lineCounter ++;
     }
-    lineWidth--;
-    lineCounter++;
-    sizeOfBoard = new Size(lineWidth+frame,lineCounter+frame);
+
+    if(errorMessage.size() != 0)
+    {
+        errorMessage += lenghtOfLines;
+        return false;
+    }
     return true;
 }

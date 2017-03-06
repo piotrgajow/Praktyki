@@ -1,22 +1,22 @@
 #ifndef VALIDATOR_H
 #define VALIDATOR_H
 #include <string>
-#include "size.h"
+#include "sizewithframe.h"
+#include <fstream>
+#include <sstream>
 
-int const frame = 2;
 
 class Validator
 {
 public:
     Validator();
-    bool validate(std::string);
-    void CouterOfFirstLineWidth(std::__cxx11::string readString, int &lineWidth);
-    Size getSizeOfBoard() const;
+    bool validateIfStringHasAllLinesEqual(std::string);
+    void couterOfFirstLineWidth(std::__cxx11::string readString, int &lineWidth);
     std::string getErrorMessage() const;
 
 private:
-    Size * sizeOfBoard;
     std::string errorMessage;
+    std::string lenghtOfLines;
 };
 
-#endif // VALIDATOR_H
+#endif
