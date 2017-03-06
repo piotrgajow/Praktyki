@@ -11,14 +11,14 @@
 class SaveToFileWithNameAndText
 {
 private:
-    bool fileExistStatus;
     FilenameReader filenameReader;
+    std::string nameOfFile;
+    std::string boardConvertToString;
 
 public:
     SaveToFileWithNameAndText();
-    void saveFile(std::vector<std::vector<bool>>);
-    void checkIfFileExist();
-    void ifFileExistAskRenameOrOverwritten();
+    void saveFile(std::string boardConvertToString, std::string nameOfFile);
+    bool checkIfFileExist(std::string nameOfFile);
 };
 
 #endif // SAVETOFILE_H
