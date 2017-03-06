@@ -32,6 +32,7 @@ void Game::startInfiniteLoop()
             command.waitAsLongAsDeclaredToGenerateTheNextBoard(button.getMinusOrPlus().getHowManySecondToGenerateNextBoard());
         }
         while (button.getSpace().getLoopStatus() == true);
+
         command.systemPause();
         }
     command.cleanCommandPromptFunction();
