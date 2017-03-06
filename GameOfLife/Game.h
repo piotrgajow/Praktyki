@@ -12,15 +12,16 @@
 #include "validator.h"
 #include "fillerwithvaluesfromtxtfile.h"
 #include <conio.h>
-
+#include "filenamereader.h"
 class Game
 {
 public:
-    Game();
-    
+    Game();    
+    void LoadBoardFromTxtFile();
+
 private:
     CheckButtonPressed newPressed;
-    FillerWithRandomValues filler;
+    FillerWithRandomValues fillerWithrandomValues;
     DisplayGameBoardOnTheCommandLine display;
     Converter converter;
     Generator generator;
@@ -29,10 +30,12 @@ private:
     ReaderFromTxtFile readerFromTxtFile;
     Validator validator;
     FillerWithValuesFromTxtFile fillerWithValuesFromTxtFile;
-
+    FilenameReader nameOfFile;
     void startInfiniteLoop();
     int counterOfIterations;
     std::string fileNameToLoad;
+    SizeWithFrame * sizeOfBoardPlusFrame;
+    Board * board;
 };
 
 #endif

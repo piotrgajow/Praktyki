@@ -2,12 +2,18 @@
 #define FILLERWITHVALUESFROMTXTFILE_H
 #include <string>
 #include "board.h"
+#include "readerfromtxtfile.h"
+#include "filler.h"
 
-class FillerWithValuesFromTxtFile
+class FillerWithValuesFromTxtFile:public virtual Filler
 {
 public:
     FillerWithValuesFromTxtFile();
-    void fillBoardWithGivenString(Board&, std::string);
+    void fillBoard();
+    void getStringFromTxtFileReader(ReaderFromTxtFile);
+private:
+    std::string readString;
+
 };
 
-#endif // FILLERWITHVALUESFROMTXTFILE_H
+#endif

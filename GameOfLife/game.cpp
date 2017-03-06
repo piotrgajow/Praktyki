@@ -1,43 +1,45 @@
 #include "Game.h"
+#include "sizewithframe.h"
 
-Board * board;
 
 Game::Game()
 {
-
     counterOfIterations = 0;
     int yourChoice;
     do{
-
         std::cout << "What you want to do:\n";
         std::cout << "1. Load board form file txt\n";
-        std::cout << "2. Load board form file image\n";
-        std::cout << "3. Generating random board\n";
+        //std::cout << "2. Load board form file image\n";
+        std::cout << "3. Generate random board\n";
         std::cout << "0. Exit\n";
         std::cin >> yourChoice;
         switch( yourChoice )  {
         case 1:
-            std::cout<<"Type file name to load: ";
-            std::cin>>fileNameToLoad;
-            readerFromTxtFile.readFromGivenFile(fileNameToLoad);
-            if(validator.validate(readerFromTxtFile.getReadString()))
+            nameOfFile.askUserAboutFileName();
+            readerFromTxtFile.readFromGivenFile(nameOfFile.getFileName());
+            sizeOfBoardPlusFrame = new SizeWithFrame(readerFromTxtFile.getReadString());
+            if(validator.validateIfStringHasAllLinesEqual(readerFromTxtFile.getReadString()))
             {
-                board = new Board(validator.getSizeOfBoard());
-                fillerWithValuesFromTxtFile.fillBoardWithGivenString(*board,readerFromTxtFile.getReadString());
+                board = new Board(*sizeOfBoardPlusFrame);
+                fillerWithValuesFromTxtFile.getStringFromTxtFileReader(readerFromTxtFile);
+                fillerWithValuesFromTxtFile.setBoard(*board);
+                fillerWithValuesFromTxtFile.fillBoard();
                 startInfiniteLoop();
-                break;
             }
             else
             {
                 display.displayErrorsCommand(validator.getErrorMessage());
-                break;
             }
+            delete sizeOfBoardPlusFrame;
+            break;
         case 2:
             //load board from image method
+            //TO DO
             break;
         case 3:
             board = new Board(20,50);
-            filler.fillBoard(*board);
+            fillerWithrandomValues.setBoard(*board);
+            fillerWithrandomValues.fillBoard();
             startInfiniteLoop();
             break;
         case 0:
@@ -73,5 +75,6 @@ void Game::startInfiniteLoop()
         while (newPressed.getStatusOfLoop() == true);
         command.systemPause();
     }
+    delete board;
     command.cleanCommandPromptFunction();
 }

@@ -28,8 +28,8 @@ SOURCES += \
     main.cpp \
     readerfromtxtfile.cpp \
     validator.cpp \
-    size.cpp \
-    fillerwithvaluesfromtxtfile.cpp
+    fillerwithvaluesfromtxtfile.cpp \
+    sizewithframe.cpp
 
 
 # The following define makes your compiler emit warnings if you use
@@ -59,8 +59,8 @@ HEADERS += Game.h \
     filenamereader.h \
     readerfromtxtfile.h \
     validator.h \
-    size.h \
-    fillerwithvaluesfromtxtfile.h
+    fillerwithvaluesfromtxtfile.h \
+    sizewithframe.h
 
 DISTFILES += \
     GameOfLife.pro.user \

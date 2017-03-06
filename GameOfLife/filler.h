@@ -1,16 +1,17 @@
 #ifndef FILLER_H
 #define FILLER_H
-#include <vector>
 #include "board.h"
 
 
 class Filler
 {
 public:
-Filler();
-virtual void fillBoard(Board & board)=0;
+    Filler();
+    virtual void fillBoard()=0;
+    void setBoard(Board &value);
 
-
+protected:
+    Board *board;
 };
 
-#endif // FILLER_H
+#endif
