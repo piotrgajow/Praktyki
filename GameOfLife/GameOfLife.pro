@@ -25,7 +25,12 @@ SOURCES += \
     converter.cpp \
     systemcommand.cpp \
     filenamereader.cpp \
-    main.cpp
+    main.cpp \
+    buttonsClass/pressedbuttoniscontrolwithskey.cpp \
+    buttonsClass/pressedbuttonisesc.cpp \
+    buttonsClass/pressedbuttonisminusorplus.cpp \
+    buttonsClass/pressedbuttonisother.cpp \
+    buttonsClass/pressedbuttonisspace.cpp
 
 
 # The following define makes your compiler emit warnings if you use
@@ -52,7 +57,13 @@ HEADERS += Game.h \
     savetofilewithnameandtext.h \
     converter.h \
     systemcommand.h \
-    filenamereader.h
+    filenamereader.h \
+    buttonsClass/pressedbuttoniscontrolwithskey.h \
+    buttonsClass/pressedbuttonisesc.h \
+    buttonsClass/pressedbuttonisminusorplus.h \
+    buttonsClass/pressedbuttonisother.h \
+    buttonsClass/pressedbuttonisspace.h \
+    buttonsClass/userinteractionviakeyboard.h
 
 DISTFILES += \
     GameOfLife.pro.user \
