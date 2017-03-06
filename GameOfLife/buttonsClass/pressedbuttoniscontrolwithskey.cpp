@@ -17,5 +17,5 @@ PressedButtonIsControlWithSKey::PressedButtonIsControlWithSKey()
 
 void PressedButtonIsControlWithSKey::actButtonPressed()
 {
-    saveToFileStatus = !saveToFileStatus;
+    saveToFileStatus = true;
 }

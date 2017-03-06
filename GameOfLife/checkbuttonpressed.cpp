@@ -20,8 +20,8 @@ void CheckButtonPressed::checkWhatButtonWasPressed()
 {
     if (GetAsyncKeyState(VK_SPACE))
     {
-        Sleep(100);
         keyIsPressed = &space;
+        Sleep(100);
     }
     else if (GetAsyncKeyState(VK_ESCAPE))
         keyIsPressed = &esc;
@@ -29,9 +29,13 @@ void CheckButtonPressed::checkWhatButtonWasPressed()
     else if (GetAsyncKeyState(VK_SUBTRACT) || GetAsyncKeyState(VK_ADD))
     {
         keyIsPressed = &minusOrPlus;
+        Sleep(100);
     }
     else if (GetAsyncKeyState(VK_CONTROL) && GetAsyncKeyState(0x53))
+    {
         keyIsPressed = &controlWithSKey;
+        Sleep(100);
+    }
 
     else
         keyIsPressed = &other;
