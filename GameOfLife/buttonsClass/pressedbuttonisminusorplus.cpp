@@ -1,4 +1,4 @@
-#include "pressedbuttonisminus.h"
+#include "pressedbuttonisminusorplus.h"
 
 float PressedButtonIsMinusOrPlus::getHowManySecondToGenerateNextBoard() const
 {
