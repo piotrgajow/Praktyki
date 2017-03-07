@@ -28,7 +28,7 @@ Game::Game()
             }
             else
             {
-                display.displayErrorsCommand(validator.getErrorMessage());
+                display.displayErrorsInformation(validator.getErrorMessage());
             }
             delete sizeOfBoardPlusFrame;
             break;
