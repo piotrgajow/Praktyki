@@ -8,6 +8,7 @@
 #include "checkbuttonpressed.h"
 #include "systemcommand.h"
 #include "savetofilewithnameandtext.h"
+#include "filenamereader.h"
 
 #include <conio.h>
 
@@ -24,6 +25,7 @@ private:
     Generator generator;
     SystemCommand command;
     SaveToFileWithNameAndText saveToFile;
+    FilenameReader filenameReader;
     void startInfiniteLoop();
     int counterOfIterations;
 };
