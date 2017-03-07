@@ -12,13 +12,10 @@ class SaveToFileWithNameAndText
 {
 private:
     FilenameReader filenameReader;
-    std::string nameOfFile;
-    std::string boardConvertToString;
 
 public:
     SaveToFileWithNameAndText();
-    void saveFile(std::string boardConvertToString, std::string nameOfFile);
-    bool checkIfFileExist(std::string nameOfFile);
+    void saveFile(std::string boardSavingToFile, std::string nameOfFile);
 };
 
 #endif // SAVETOFILE_H

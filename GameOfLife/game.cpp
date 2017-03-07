@@ -4,24 +4,25 @@ Board board(20,50);
 
 Game::Game()
 {
-counterOfIterations = 0;
-filler.fillBoard(board);
-startInfiniteLoop();
+    counterOfIterations = 0;
+    filler.fillBoard(board);
+    startInfiniteLoop();
 }
 
 void Game::startInfiniteLoop()
 {
     while(1)
-        {
+    {
         newPressed.checkStatusOfButtonPressed();
         do
         {
             command.cleanCommandPromptFunction();
             if (newPressed.getSaveToFileStatus() == true)
             {
-                filenameReader.askUserAboutFileName();
-                converter.convertBoolBoardToString((board.getTheBoard()));
-                saveToFile.saveBoardToFile(converter.getBoardConvertToString(),filenameReader.getFileName());
+               filenameReader.askUserAboutFileName();
+                //converter.convertBoolBoardToString((board.getTheBoard()));
+                //saveToFile.saveFile(converter.getBoardConvertToString(),filenameReader.getFileName());
+                saveToFile.saveFile(converter.convertBoolBoardToString((board.getTheBoard())),filenameReader.getFileName());
                 newPressed.setSaveToFileStatus(false);
             }
             converter.convertBoolBoardToString((board.getTheBoard()));
@@ -35,6 +36,6 @@ void Game::startInfiniteLoop()
         }
         while (newPressed.getStatusOfLoop() == true);
         command.systemPause();
-        }
+    }
     command.cleanCommandPromptFunction();
 }
