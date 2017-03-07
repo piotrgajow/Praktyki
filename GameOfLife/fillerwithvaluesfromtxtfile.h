@@ -10,7 +10,7 @@ class FillerWithValuesFromTxtFile:public virtual Filler
 public:
     FillerWithValuesFromTxtFile();
     void fillBoard();
-    void getStringFromTxtFileReader(ReaderFromTxtFile);
+    void getStringFromTxtFileReader(std::string);
 private:
     std::string readString;
 

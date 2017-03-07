@@ -26,7 +26,7 @@ void FillerWithValuesFromTxtFile::fillBoard()
     board->setStateOfBoard(theBoard);
 }
 
-void FillerWithValuesFromTxtFile::getStringFromTxtFileReader(ReaderFromTxtFile reader)
+void FillerWithValuesFromTxtFile::getStringFromTxtFileReader(std::string givenString)
 {
-    readString = reader.getReadString();
+    readString = givenString;
 }
