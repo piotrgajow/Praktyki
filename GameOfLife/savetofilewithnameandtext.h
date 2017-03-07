@@ -10,9 +10,6 @@
 
 class SaveToFileWithNameAndText
 {
-private:
-    FilenameReader filenameReader;
-
 public:
     SaveToFileWithNameAndText();
     void saveFile(std::string boardSavingToFile, std::string nameOfFile);
