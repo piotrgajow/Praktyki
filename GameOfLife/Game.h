@@ -17,7 +17,6 @@ class Game
 {
 public:
     Game();    
-    void LoadBoardFromTxtFile();
 
 private:
     CheckButtonPressed newPressed;
@@ -36,6 +35,12 @@ private:
     std::string fileNameToLoad;
     SizeWithFrame * sizeOfBoardPlusFrame;
     Board * board;
+    void LoadBoardFromTxtFile();
+    void LoadBordFromTxtFile();
+    void FillBoardIfValidated();
+    void generateRandomBoard();
+    void showOptions();
+    void displayCurrentBoard();
 };
 
 #endif
