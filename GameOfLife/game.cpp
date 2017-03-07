@@ -8,8 +8,8 @@ Game::Game()
     int yourChoice;
     do{
         std::cout << "What you want to do:\n";
-        std::cout << "1. Load board form file txt\n";
-        //std::cout << "2. Load board form file image\n";
+        std::cout << "1. Load board from file txt\n";
+        //std::cout << "2. Load board from file image\n";
         std::cout << "3. Generate random board\n";
         std::cout << "0. Exit\n";
         std::cin >> yourChoice;
@@ -18,7 +18,7 @@ Game::Game()
             nameOfFile.askUserAboutFileName();
             readerFromTxtFile.readFromGivenFile(nameOfFile.getFileName());
             sizeOfBoardPlusFrame = new SizeWithFrame(readerFromTxtFile.getReadString());
-            if(validator.validateIfStringHasAllLinesEqual(readerFromTxtFile.getReadString()))
+            if(validator.validateIfStringHasAllLinesEqual(readerFromTxtFile.getReadString()) && validator.validateIfStringHasInvalidCharacters(readerFromTxtFile.getReadString()))
             {
                 board = new Board(*sizeOfBoardPlusFrame);
                 fillerWithValuesFromTxtFile.getStringFromTxtFileReader(readerFromTxtFile);

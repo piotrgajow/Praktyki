@@ -11,6 +11,7 @@ class Validator
 public:
     Validator();
     bool validateIfStringHasAllLinesEqual(std::string);
+    bool validateIfStringHasInvalidCharacters(std::string);
     void couterOfFirstLineWidth(std::__cxx11::string readString, int &lineWidth);
     std::string getErrorMessage() const;
 

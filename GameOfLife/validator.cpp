@@ -22,6 +22,7 @@ std::string Validator::getErrorMessage() const
 bool Validator::validateIfStringHasAllLinesEqual(std::__cxx11::string readString)
 {
     errorMessage = "";
+    lenghtOfLines = "";
     std::istringstream streamReadString(readString);
     std::string token;
     int lineCounter = 0;
@@ -36,7 +37,7 @@ bool Validator::validateIfStringHasAllLinesEqual(std::__cxx11::string readString
         }
         if (bufferLineWidth != token.size())
         {
-            errorMessage = "Lines must have this same lenght. \nLenght of lines: \n";
+            errorMessage = "\nLines must have this same lenght. \nLenght of lines: \n";
         }
         lenghtOfLines += std::to_string(lineCounter) + ": " + std::to_string(token.size()) +"\n";
         lineCounter ++;
@@ -46,6 +47,19 @@ bool Validator::validateIfStringHasAllLinesEqual(std::__cxx11::string readString
     {
         errorMessage += lenghtOfLines;
         return false;
+    }
+    return true;
+}
+
+bool Validator::validateIfStringHasInvalidCharacters(std::__cxx11::string readString)
+{
+    for(unsigned i = 0; i < readString.size() ; i++)
+    {
+        if (readString[i] != 'X' && readString[i] != ' ' && readString[i] != '\n')
+        {
+            errorMessage += "\nGiven File has invalid characters\n";
+            return false;
+        }
     }
     return true;
 }
