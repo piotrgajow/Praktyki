@@ -21,7 +21,7 @@ void Game::startInfiniteLoop()
             {
                 filenameReader.askUserAboutFileName();
                 converter.convertBoolBoardToString((board.getTheBoard()));
-                saveToFile.saveBoardToFile(converter.getBoardConvertToString(),filenameReader.getFileName());
+                saveToFile.saveFile(converter.getBoardConvertToString(),filenameReader.getFileName());
                 newPressed.setSaveToFileStatus(false);
             }
             converter.convertBoolBoardToString((board.getTheBoard()));
