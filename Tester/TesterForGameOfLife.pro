@@ -33,10 +33,11 @@ SOURCES += \
     test_readerfromtxtfile.cpp \
     ../GameOfLife/fillerwithvaluesfromtxtfile.cpp \
     ../GameOfLife/readerfromtxtfile.cpp \
-    ../GameOfLife/size.cpp \
     ../GameOfLife/validator.cpp \
     test_validator.cpp \
-    test_fillerwithvaluesfromtxtfile.cpp
+    test_fillerwithvaluesfromtxtfile.cpp \
+    ../GameOfLife/sizewithframe.cpp \
+    test_sizewithframe.cpp
 
 
 
@@ -70,8 +71,8 @@ HEADERS += \
     ../GameOfLife/systemcommand.h \
     ../GameOfLife/readerfromtxtfile.h \
     ../GameOfLife/fillerwithvaluesfromtxtfile.h \
-    ../GameOfLife/size.h \
-    ../GameOfLife/validator.h
+    ../GameOfLife/validator.h \
+    ../GameOfLife/sizewithframe.h
 
 DISTFILES += \
     TesterForGameOfLife.pro.user \

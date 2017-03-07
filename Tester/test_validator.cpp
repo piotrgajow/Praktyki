@@ -7,14 +7,22 @@ TEST_CASE("check if Validator properly counts number of symbols in given string"
     Validator validator;
     int numberOfSymbols = 0;
     std::string givenString = "I contain twenty nine symbols";
-    validator.CouterOfFirstLineWidth(givenString,numberOfSymbols);
+    validator.couterOfFirstLineWidth(givenString,numberOfSymbols);
     REQUIRE(numberOfSymbols == 29);
 }
 
-TEST_CASE("check if Validator will find error in line 1", "[test_validator]")
+TEST_CASE("check if Validator will find error in lenght of given String", "[test_validator]")
 {
     Validator validator;
     std::string readFromTxtFile = "XXXX\nXXX\nXXXX";
-    validator.validate(readFromTxtFile);
-    REQUIRE(validator.getErrorMessage() == "Error in line: 1");
+    validator.validateIfStringHasAllLinesEqual(readFromTxtFile);
+    REQUIRE(validator.getErrorMessage().size() != 0);
+}
+
+TEST_CASE("check if Validator will find error becouse of invalid character in given String", "[test_validator]")
+{
+    Validator validator;
+    std::string readFromTxtFile = "X12X\nXXXX\nXXXX";
+    validator.validateIfStringHasInvalidCharacters(readFromTxtFile);
+    REQUIRE(validator.getErrorMessage() == "\nGiven File has invalid characters\n");
 }
