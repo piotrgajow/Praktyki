@@ -2,8 +2,8 @@
 
 SizeWithFrame::SizeWithFrame(int newWidth,int newHeight)
 {    
-    height = newHeight;
-    width = newWidth;
+    height = newHeight + frame;
+    width = newWidth + frame;
 }
 
 int SizeWithFrame::counterOfLineWidth(std::string readString)

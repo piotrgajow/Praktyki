@@ -13,10 +13,10 @@ public:
     SizeWithFrame(std::string stringBoard);
     int getHeight() const;
     int getWidth() const;
-    int counterOfLineWidth(std::string);
-    int counterOfBoardHeight(std::string);
 
 private:
+    int counterOfLineWidth(std::string);
+    int counterOfBoardHeight(std::string);
     int height;
     int width;
 };
