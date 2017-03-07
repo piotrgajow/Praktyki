@@ -35,11 +35,11 @@ void CheckButtonPressed::checkStatusOfButtonPressed()
     }
     else if(GetAsyncKeyState(VK_ADD))
     {
-        howManySecondToGenerateNextBoard*=2;
+        howManySecondToGenerateNextBoard/=2;
     }
     else if(GetAsyncKeyState(VK_SUBTRACT))
     {
-        howManySecondToGenerateNextBoard/=2;
+        howManySecondToGenerateNextBoard*=2;
     }
     else if(GetAsyncKeyState(VK_CONTROL) && GetAsyncKeyState(0x53))
     {
