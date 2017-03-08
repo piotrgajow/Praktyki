@@ -10,9 +10,9 @@ public:
     FillerWithValuesFromTxtFile();
     void fillBoard();
     void getStringFromTxtFileReader(std::string);
+
 private:
     std::string readString;
-
 };
 
 #endif
