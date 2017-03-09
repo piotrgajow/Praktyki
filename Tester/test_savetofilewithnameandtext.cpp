@@ -10,21 +10,11 @@ TEST_CASE("CheckIfFileOpenProperly", "[savetofilewithnameandtext]")
 
     SaveToFileWithNameAndText savingFile;
     savingFile.saveFile(boardSavingToFile, nameOfFile);
-
-    bool checkIfFileOpen;
     file.open(nameOfFile);
+    bool checkIfFileOpen=file.is_open();
+    CHECK(checkIfFileOpen==true);
+    file.close();
 
-        if(file.is_open())
-        {
-            checkIfFileOpen=true;
-        }
-        else
-        {
-            checkIfFileOpen=false;
-        }
-        file.close();
-     CHECK(checkIfFileOpen==true);
-
-     remove("fileName.txt");
+    remove("fileName.txt");
 }
 
