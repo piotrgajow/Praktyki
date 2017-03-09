@@ -15,6 +15,9 @@ CheckButtonPressed::CheckButtonPressed()
     loopStatus = false;
     saveToFileStatus = false;
     howManySecondToGenerateNextBoard = 1;
+    initscr();
+    noecho();
+    cbreak();
 }
 
 float CheckButtonPressed::getHowManySecondToGenerateNextBoard()
@@ -24,24 +27,25 @@ float CheckButtonPressed::getHowManySecondToGenerateNextBoard()
 
 void CheckButtonPressed::checkStatusOfButtonPressed()
 {
-    if(GetAsyncKeyState(VK_ESCAPE))
-        {
-            exit(0);
-        }
-    else if(GetAsyncKeyState(VK_SPACE))
+    int key = getch();
+    if(key == 27))
+    {
+        exit(0);
+    }
+    else if(key == ' '))
     {
         loopStatus = !loopStatus;
         Sleep(100);
     }
-    else if(GetAsyncKeyState(VK_ADD))
+    else if(key == '+'))
     {
         howManySecondToGenerateNextBoard/=2;
     }
-    else if(GetAsyncKeyState(VK_SUBTRACT))
+    else if(key == '-'))
     {
         howManySecondToGenerateNextBoard*=2;
     }
-    else if(GetAsyncKeyState(VK_CONTROL) && GetAsyncKeyState(0x53))
+    else if(key == 's')
     {
         saveToFileStatus = true;
     }

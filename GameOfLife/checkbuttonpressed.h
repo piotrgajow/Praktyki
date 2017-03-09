@@ -1,7 +1,7 @@
 #ifndef CHECKBUTTONPRESSED_H
 #define CHECKBUTTONPRESSED_H
 
-#include <windows.h>
+#include <ncurses.h>
 #include <iostream>
 #include <conio.h>
 
