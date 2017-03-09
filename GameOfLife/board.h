@@ -14,7 +14,7 @@ private:
 public:
     std::vector<std::vector<bool>> getTheBoard();
     void setStateOfBoard(std::vector<std::vector<bool>> newTheBoard);
-    void setStateOfCellInTheBoard(RowsColumns RC, bool newStateOfCell);
+    void setStateOfCellInTheBoard(RowsColumns RowAndColumn, bool newStateOfCell);
     Board(int numberOfRows, int numberOfColumns);
     Board(SizeWithFrame);
     int getNumberOfColumns() const;

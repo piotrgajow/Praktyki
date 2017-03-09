@@ -27,9 +27,9 @@ void Board::setStateOfBoard(std::vector<std::vector<bool> > newTheBoard)
     theBoard = newTheBoard;
 }
 
-void Board::setStateOfCellInTheBoard(RowsColumns RC, bool newStateOfCell)
+void Board::setStateOfCellInTheBoard(RowsColumns RowAndColumn, bool newStateOfCell)
 {
-    theBoard[RC.positionInRow][RC.positionInColumn] = newStateOfCell;
+    theBoard[RowAndColumn.positionInRow][RowAndColumn.positionInColumn] = newStateOfCell;
 }
 
 Board::Board(int newNumberOfRows, int newNumberColumns)
