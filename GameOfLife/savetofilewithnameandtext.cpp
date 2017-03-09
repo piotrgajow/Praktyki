@@ -10,7 +10,7 @@ SaveToFileWithNameAndText::SaveToFileWithNameAndText()
 void SaveToFileWithNameAndText::saveFile(std::string boardSavingToFile, std::string nameOfFile)
 {
     std::ofstream file;
-    file.open(nameOfFile);
+    file.open(nameOfFile.c_str());
     if (file.good())
     {
         file << boardSavingToFile;
