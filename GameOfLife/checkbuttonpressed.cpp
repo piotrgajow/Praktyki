@@ -28,20 +28,20 @@ float CheckButtonPressed::getHowManySecondToGenerateNextBoard()
 void CheckButtonPressed::checkStatusOfButtonPressed()
 {
     int key = getch();
-    if(key == 27))
+    if(key == 27)
     {
         exit(0);
     }
-    else if(key == ' '))
+    else if(key == ' ')
     {
         loopStatus = !loopStatus;
         Sleep(100);
     }
-    else if(key == '+'))
+    else if(key == '+')
     {
         howManySecondToGenerateNextBoard/=2;
     }
-    else if(key == '-'))
+    else if(key == '-')
     {
         howManySecondToGenerateNextBoard*=2;
     }
