@@ -1,0 +1,7 @@
+language: cpp
+
+script:
+    - cd GameOfLife
+    - qmake -v
+    - qmake -o Makefile GameOfLife.pro
+    - make
