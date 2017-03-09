@@ -10,8 +10,6 @@
 #include "savetofilewithnameandtext.h"
 #include "filenamereader.h"
 
-#include <conio.h>
-
 class Game
 {
 public:
