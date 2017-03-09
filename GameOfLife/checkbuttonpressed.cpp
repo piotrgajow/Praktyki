@@ -35,7 +35,7 @@ void CheckButtonPressed::checkStatusOfButtonPressed()
     else if(key == ' ')
     {
         loopStatus = !loopStatus;
-        Sleep(100);
+        usleep(100);
     }
     else if(key == '+')
     {

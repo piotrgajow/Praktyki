@@ -3,6 +3,8 @@
 
 #include <ncurses.h>
 #include <iostream>
+#include <stdlib.h>
+#include <unistd.h>
 
 class CheckButtonPressed
 {
