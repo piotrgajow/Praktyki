@@ -3,6 +3,7 @@
 
 #include <vector>
 #include "sizewithframe.h"
+#include "structurerowscolumns.h"
 
 class Board
 {
@@ -13,7 +14,7 @@ private:
 public:
     std::vector<std::vector<bool>> getTheBoard();
     void setStateOfBoard(std::vector<std::vector<bool>> newTheBoard);
-    void setStateOfCellInTheBoard(int positionInRow, int positionInColumn, bool newStateOfCell);
+    void setStateOfCellInTheBoard(RowsColumns RC, bool newStateOfCell);
     Board(int numberOfRows, int numberOfColumns);
     Board(SizeWithFrame);
     int getNumberOfColumns() const;

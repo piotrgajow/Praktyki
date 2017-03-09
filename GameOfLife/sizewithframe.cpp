@@ -19,7 +19,7 @@ int SizeWithFrame::counterOfLineWidth(std::string readString)
     return lineWidth;
 }
 
-int SizeWithFrame::counterOfBoardHeight(std::__cxx11::string readString)
+int SizeWithFrame::counterOfBoardHeight(std::string readString)
 {
     std::istringstream streamReadString(readString);
     std::string token;
@@ -30,7 +30,7 @@ int SizeWithFrame::counterOfBoardHeight(std::__cxx11::string readString)
     return lineCounter;
 }
 
-SizeWithFrame::SizeWithFrame(std::__cxx11::string stringBoard)
+SizeWithFrame::SizeWithFrame(std::string stringBoard)
 {
     width = counterOfLineWidth(stringBoard) + frame;
     height = counterOfBoardHeight(stringBoard) + frame;

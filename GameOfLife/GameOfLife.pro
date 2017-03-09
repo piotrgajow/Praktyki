@@ -60,7 +60,8 @@ HEADERS += Game.h \
     readerfromtxtfile.h \
     validator.h \
     fillerwithvaluesfromtxtfile.h \
-    sizewithframe.h
+    sizewithframe.h \
+    structurerowscolumns.h
 
 DISTFILES += \
     GameOfLife.pro.user \

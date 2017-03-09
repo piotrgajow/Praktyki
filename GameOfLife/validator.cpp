@@ -5,7 +5,7 @@ Validator::Validator()
 
 }
 
-void Validator::couterOfFirstLineWidth(std::__cxx11::string readString, int &lineWidth)
+void Validator::couterOfFirstLineWidth(std::string readString, int &lineWidth)
 {
     for(unsigned numberOfSymbolFromReadString = 0; numberOfSymbolFromReadString< readString.size();numberOfSymbolFromReadString++)
     {
@@ -19,7 +19,7 @@ std::string Validator::getErrorMessage() const
     return errorMessage;
 }
 
-bool Validator::validateIfStringHasAllLinesEqual(std::__cxx11::string readString)
+bool Validator::validateIfStringHasAllLinesEqual(std::string readString)
 {
     errorMessage = "";
     lenghtOfLines = "";
@@ -51,7 +51,7 @@ bool Validator::validateIfStringHasAllLinesEqual(std::__cxx11::string readString
     return true;
 }
 
-bool Validator::validateIfStringHasInvalidCharacters(std::__cxx11::string readString)
+bool Validator::validateIfStringHasInvalidCharacters(std::string readString)
 {
     for(unsigned i = 0; i < readString.size() ; i++)
     {

@@ -1,6 +1,7 @@
 #include "displaygameboardonthecommandline.h"
 
 
+
 DisplayGameBoardOnTheCommandLine::DisplayGameBoardOnTheCommandLine()
 {
 }
@@ -18,7 +19,7 @@ void DisplayGameBoardOnTheCommandLine::displayCounterOnTheCommandLine(int counte
     std::cout<<" Iteration count : "<<counterOfIterations<<std::endl;
 }
 
-void DisplayGameBoardOnTheCommandLine::displayErrorsInformation(std::__cxx11::string error)
+void DisplayGameBoardOnTheCommandLine::displayErrorsInformation(std::string error)
 {
     std::cout<<error<<std::endl;
 }
