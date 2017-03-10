@@ -10,7 +10,7 @@ private:
 public:
     bool exit;
     Mock_checkbuttonpressed();
-    void checkStatusOfButtonPressed();
+    // void checkStatusOfButtonPressed();
 };
 
 #endif // MOCK_CHECKBUTTONPRESSED_H
