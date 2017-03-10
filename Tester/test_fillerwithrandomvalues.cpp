@@ -1,6 +1,6 @@
 #include "Tester_Catch.h"
-#include "..\GameOfLife\fillerwithrandomvalues.h"
-#include "..\GameOfLife\filler.h"
+#include "../GameOfLife/fillerwithrandomvalues.h"
+#include "../GameOfLife/filler.h"
 
 TEST_CASE( "Check if top border of frame is filled with zero", "[FillerWithRandomValues]" ) {
 
