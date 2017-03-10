@@ -23,6 +23,5 @@ script:
     - make
     - cd ../Tester
     - qmake -o Makefile TesterForGameOfLife.pro
-    - cat "..\GameOfLife\checkbuttonpressed.h"
     - make
     - ./TesterForGameOfLife

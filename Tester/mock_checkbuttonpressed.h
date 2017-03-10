@@ -1,7 +1,7 @@
 #ifndef MOCK_CHECKBUTTONPRESSED_H
 #define MOCK_CHECKBUTTONPRESSED_H
 
-#include "..\GameOfLife\checkbuttonpressed.h"
+#include "../GameOfLife/checkbuttonpressed.h"
 
 class Mock_checkbuttonpressed:public CheckButtonPressed
 {
