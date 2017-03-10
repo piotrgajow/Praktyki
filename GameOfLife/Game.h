@@ -32,11 +32,9 @@ private:
     FilenameReader nameOfFile;
     void startInfiniteLoop();
     int counterOfIterations;
-    std::string fileNameToLoad;
     SizeWithFrame * sizeOfBoardPlusFrame;
     Board * board;
     void LoadBoardFromTxtFile();
-    void LoadBordFromTxtFile();
     void FillBoardIfValidated();
     void generateRandomBoard();
     void showOptions();

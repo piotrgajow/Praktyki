@@ -10,7 +10,7 @@ Game::Game()
         std::cin >> yourChoice;
         switch( yourChoice )  {
         case 1:
-            LoadBordFromTxtFile();
+            LoadBoardFromTxtFile();
             FillBoardIfValidated();
             break;
         case 2:
@@ -28,7 +28,7 @@ Game::Game()
     }while (yourChoice != 0);
 }
 
-void Game::LoadBordFromTxtFile()
+void Game::LoadBoardFromTxtFile()
 {
     nameOfFile.askUserAboutFileName();
     readerFromTxtFile.readFromGivenFile(nameOfFile.getFileName());
@@ -37,16 +37,20 @@ void Game::LoadBordFromTxtFile()
 
 void Game::FillBoardIfValidated()
 {
-    if(validator.validateIfStringHasAllLinesEqual(readerFromTxtFile.getReadString()) && validator.validateIfStringHasInvalidCharacters(readerFromTxtFile.getReadString()))
+    if(validator.validateIfStringHasAllLinesEqual(readerFromTxtFile.getReadString()) &&
+            validator.validateIfStringHasInvalidCharacters(readerFromTxtFile.getReadString()))
     {
         board = new Board(*sizeOfBoardPlusFrame);
-        delete sizeOfBoardPlusFrame;
         fillerWithValuesFromTxtFile.getStringFromTxtFileReader(readerFromTxtFile.getReadString());
         fillerWithValuesFromTxtFile.setBoard(*board);
         fillerWithValuesFromTxtFile.fillBoard();
         startInfiniteLoop();
     }
-    else display.displayErrorsInformation(validator.getErrorMessage());
+    else
+    {
+        display.displayErrorsInformation(validator.getErrorMessage());
+    }
+    delete sizeOfBoardPlusFrame;
 }
 
 void Game::generateRandomBoard()
@@ -68,7 +72,7 @@ void Game::showOptions()
 
 void Game::displayCurrentBoard()
 {
-    converter.convertBoolBoardToString((board->getTheBoard()));
+    converter.convertBoolBoardToString(board->getTheBoard());
     display.displayGameBoardOnTheCommandLine(converter.getBoardConvertToString(),board->getNumberOfColumns());
     display.displayCounterOnTheCommandLine(counterOfIterations);
 }
