@@ -58,3 +58,5 @@ DISTFILES += \
     GameOfLife.pro.user \
     README.md
 
+LIBS += -lncurses
+
