@@ -9,18 +9,19 @@ before_install:
 install:
     - sudo apt-get install -qq g++-4.8
     - export CXX="g++-4.8"
+
+before_script:
     - echo $CXX
     - g++ --version
+    - qmake -v
+    - ls -la GameOfLife
+    - ls -la Tester
 
 script:
     - cd GameOfLife
-    - qmake -v
     - qmake -o Makefile GameOfLife.pro
-    - cat Makefile
     - make
     - cd ../Tester
-    - qmake -v
     - qmake -o Makefile TesterForGameOfLife.pro
     - make
-    - cat Makefile
     - ./TesterForGameOfLife
