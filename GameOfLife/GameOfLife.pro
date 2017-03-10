@@ -60,6 +60,7 @@ DISTFILES += \
 
 LIBS += -lncurses
 
+QMAKE_CXX = $CXX
 QMAKE_CXXFLAGS += -std=c++11
 
 
