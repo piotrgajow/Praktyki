@@ -16,9 +16,11 @@ script:
     - cd GameOfLife
     - qmake -v
     - qmake -o Makefile GameOfLife.pro
+    - cat Makefile
     - make
     - cd ../Tester
     - qmake -v
     - qmake -o Makefile TesterForGameOfLife.pro
     - make
+    - cat Makefile
     - ./TesterForGameOfLife
