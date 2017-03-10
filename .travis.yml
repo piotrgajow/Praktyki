@@ -5,3 +5,8 @@ script:
     - qmake -v
     - qmake -o Makefile GameOfLife.pro
     - make
+    - cd ../Tester
+    - qmake -v
+    - qmake -o Makefile TesterForGameOfLife.pro
+    - make
+    - ./TesterForGameOfLife
