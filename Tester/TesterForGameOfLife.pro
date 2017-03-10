@@ -70,3 +70,6 @@ DISTFILES += \
 SUBDIRS += \
     ../GameOfLife/GameOfLife.pro \
     ../GameOfLife/GameOfLife.pro
+
+QMAKE_CXX = g++-4.8
+QMAKE_CXXFLAGS += -std=c++11
