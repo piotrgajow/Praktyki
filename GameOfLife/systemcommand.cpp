@@ -19,7 +19,7 @@ void SystemCommand::waitAsLongAsDeclaredToGenerateTheNextBoard(float howManySeco
 {
     if (loopStatus)
     {
-         Sleep(howManySecondToGenerateNextBoard*1000);
+        usleep(howManySecondToGenerateNextBoard*1000);
     }
 }
 
