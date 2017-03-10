@@ -20,7 +20,10 @@ void FillerWithValuesFromTxtFile::fillBoard()
                 readString[positionInString] == 'X' ? theBoard[row][column] = true : theBoard[row][column] = false;
                 positionInString++;
             }
-            else positionInString+=1;
+            else
+            {
+                positionInString+=1;
+            }
         }
     }
     board->setStateOfBoard(theBoard);

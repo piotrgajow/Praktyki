@@ -4,10 +4,10 @@
 
 TEST_CASE( "Check if top border of frame is filled with zero", "[FillerWithRandomValues]" ) {
 
-FillerWithRandomValues fillerWithRandomValues;
-Board board(10,10);
-fillerWithRandomValues.setBoard(board);
-fillerWithRandomValues.fillBoard();
+    FillerWithRandomValues fillerWithRandomValues;
+    Board board(10,10);
+    fillerWithRandomValues.setBoard(board);
+    fillerWithRandomValues.fillBoard();
 
     for(unsigned  positionColumn =0; positionColumn < board.getNumberOfColumns(); positionColumn++)
     {
@@ -17,10 +17,10 @@ fillerWithRandomValues.fillBoard();
 
 TEST_CASE( "Check if left border of frame is filled with zero", "[FillerWithRandomValues]" ) {
 
-FillerWithRandomValues fillerWithRandomValues;
-Board board(10,10);
-fillerWithRandomValues.setBoard(board);
-fillerWithRandomValues.fillBoard();
+    FillerWithRandomValues fillerWithRandomValues;
+    Board board(10,10);
+    fillerWithRandomValues.setBoard(board);
+    fillerWithRandomValues.fillBoard();
 
     for(unsigned positionLine=0 ; positionLine < board.getNumberOfRows() ; positionLine++)
     {
@@ -30,10 +30,10 @@ fillerWithRandomValues.fillBoard();
 
 TEST_CASE( "Check if bottom border of frame is filled with zero", "[FillerWithRandomValues]" ) {
 
-FillerWithRandomValues fillerWithRandomValues;
-Board board(10,10);
-fillerWithRandomValues.setBoard(board);
-fillerWithRandomValues.fillBoard();
+    FillerWithRandomValues fillerWithRandomValues;
+    Board board(10,10);
+    fillerWithRandomValues.setBoard(board);
+    fillerWithRandomValues.fillBoard();
 
     for(unsigned positionColumn = 0; positionColumn < board.getNumberOfColumns(); positionColumn++)
     {
@@ -43,10 +43,10 @@ fillerWithRandomValues.fillBoard();
 
 TEST_CASE( "Check if right border of frame is filled with zero", "[FillerWithRandomValues]" ) {
 
-FillerWithRandomValues fillerWithRandomValues;
-Board board(10,10);
-fillerWithRandomValues.setBoard(board);
-fillerWithRandomValues.fillBoard();
+    FillerWithRandomValues fillerWithRandomValues;
+    Board board(10,10);
+    fillerWithRandomValues.setBoard(board);
+    fillerWithRandomValues.fillBoard();
 
     for(unsigned positionLine = 0 ; positionLine < board.getNumberOfRows(); positionLine++)
     {
@@ -56,10 +56,10 @@ fillerWithRandomValues.fillBoard();
 
 TEST_CASE( "Check if values in the board are no higher than 1", "[FillerWithRandomValues]" ) {
 
-FillerWithRandomValues fillerWithRandomValues;
-Board board(10,10);
-fillerWithRandomValues.setBoard(board);
-fillerWithRandomValues.fillBoard();
+    FillerWithRandomValues fillerWithRandomValues;
+    Board board(10,10);
+    fillerWithRandomValues.setBoard(board);
+    fillerWithRandomValues.fillBoard();
 
     for(unsigned positionLine = 1 ; positionLine < board.getNumberOfRows() ; positionLine++)
     {

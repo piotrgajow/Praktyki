@@ -10,9 +10,8 @@ class Validator
 {
 public:
     Validator();
-    bool validateIfStringHasAllLinesEqual(std::string);
-    bool validateIfStringHasInvalidCharacters(std::string);
-    void couterOfFirstLineWidth(std::string readString, int &lineWidth);
+    bool validateIfStringHasAllLinesLenghtEqual(std::string);
+    bool validateIfStringHasNotInvalidCharacters(std::string);
     std::string getErrorMessage() const;
 
 private:

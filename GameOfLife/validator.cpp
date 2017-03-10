@@ -5,30 +5,19 @@ Validator::Validator()
 
 }
 
-void Validator::couterOfFirstLineWidth(std::string readString, int &lineWidth)
-{
-    for(unsigned numberOfSymbolFromReadString = 0; numberOfSymbolFromReadString< readString.size();numberOfSymbolFromReadString++)
-    {
-        lineWidth++;
-        if(readString[numberOfSymbolFromReadString] == '\n' ) break;
-    }
-}
-
 std::string Validator::getErrorMessage() const
 {
     return errorMessage;
 }
 
-bool Validator::validateIfStringHasAllLinesEqual(std::string readString)
+bool Validator::validateIfStringHasAllLinesLenghtEqual(std::string readString)
 {
     errorMessage = "";
     lenghtOfLines = "";
     std::istringstream streamReadString(readString);
     std::string token;
     int lineCounter = 0;
-    int lineWidth = 0;
     int bufferLineWidth = 0;
-    couterOfFirstLineWidth(readString, lineWidth);
     for (readString; std::getline(streamReadString, token); ) {
         if (bufferLineWidth == 0 )
         {
@@ -37,7 +26,7 @@ bool Validator::validateIfStringHasAllLinesEqual(std::string readString)
         }
         if (bufferLineWidth != token.size())
         {
-            errorMessage = "\nLines must have this same lenght. \nLenght of lines: \n";
+            errorMessage = "\nLines must have the same lenght. \nLenght of lines: \n";
         }
         lenghtOfLines += std::to_string(lineCounter) + ": " + std::to_string(token.size()) +"\n";
         lineCounter ++;
@@ -51,7 +40,7 @@ bool Validator::validateIfStringHasAllLinesEqual(std::string readString)
     return true;
 }
 
-bool Validator::validateIfStringHasInvalidCharacters(std::string readString)
+bool Validator::validateIfStringHasNotInvalidCharacters(std::string readString)
 {
     for(unsigned i = 0; i < readString.size() ; i++)
     {

@@ -45,7 +45,7 @@ TEST_CASE( "Check if PLUS('+') changes value", "[checkButtonPressed]" )
     keybd_event(VK_ADD, 0, KEYEVENTF_EXTENDEDKEY | KEYEVENTF_KEYUP, 0);
     pressTest.checkStatusOfButtonPressed();
 
-    CHECK(pressTest.getHowManySecondToGenerateNextBoard() == 2);
+    CHECK(pressTest.getHowManySecondToGenerateNextBoard() == 0.5);
 }
 
 TEST_CASE( "Check if MINUS('-') changes value", "[checkButtonPressed]" )
@@ -56,5 +56,5 @@ TEST_CASE( "Check if MINUS('-') changes value", "[checkButtonPressed]" )
     keybd_event(VK_SUBTRACT, 0, KEYEVENTF_EXTENDEDKEY | KEYEVENTF_KEYUP, 0);
     pressTest.checkStatusOfButtonPressed();
 
-    CHECK(pressTest.getHowManySecondToGenerateNextBoard() == 0.5);
+    CHECK(pressTest.getHowManySecondToGenerateNextBoard() == 2);
 }
