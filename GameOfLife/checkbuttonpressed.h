@@ -1,9 +1,15 @@
 #ifndef CHECKBUTTONPRESSED_H
 #define CHECKBUTTONPRESSED_H
 
+#ifdef _WIN32
 #include <windows.h>
+#elif __linux__
+#include <curses.h>
+#else
+#endif
+
+
 #include <iostream>
-#include <conio.h>
 
 class CheckButtonPressed
 {
