@@ -88,7 +88,7 @@ void Game::startInfiniteLoop()
             if (newPressed.getSaveToFileStatus() == true)
             {
                 nameOfFile.askUserAboutFileName();
-                converter.convertBoolBoardToString((board->getTheBoard()));
+                converter.convertBoolBoardToString(board->getTheBoard());
                 saveToFile.saveFile(converter.getBoardConvertToString(),nameOfFile.getFileName());
                 newPressed.setSaveToFileStatus(false);
             }
