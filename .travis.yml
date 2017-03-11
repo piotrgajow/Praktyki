@@ -1,0 +1,24 @@
+language: cpp
+
+compiler: g++
+
+before_install:
+    - sudo add-apt-repository -y ppa:ubuntu-toolchain-r/test
+    - sudo apt-get update -qq
+
+install:
+    - sudo apt-get install -qq g++-4.8
+    - export CXX="g++-4.8"
+
+before_script:
+    - g++ --version
+    - qmake -v
+
+script:
+    - cd GameOfLife
+    - qmake -o Makefile GameOfLife.pro
+    - make
+    - cd ../Tester
+    - qmake -o Makefile TesterForGameOfLife.pro
+    - make
+    - ./TesterForGameOfLife
