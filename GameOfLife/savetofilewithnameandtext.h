@@ -15,4 +15,4 @@ public:
     void saveFile(std::string boardSavingToFile, std::string nameOfFile);
 };
 
-#endif // SAVETOFILE_H
+#endif

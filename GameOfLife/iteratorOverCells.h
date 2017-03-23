@@ -12,4 +12,4 @@ public:
     Board iterateOverAllCells(Board & newBoard, Board oldBoard);
 };
 
-#endif // ITERATOR_H
+#endif

@@ -11,6 +11,7 @@ private:
     bool loopStatus;
     bool saveToFileStatus;
     float howManySecondToGenerateNextBoard;
+
 public:
     CheckButtonPressed();
     void checkStatusOfButtonPressed();

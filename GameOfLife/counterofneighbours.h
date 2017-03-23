@@ -9,4 +9,4 @@ public:
     int countAliveNeighbours(Board & board, int numberOfRow, int numberOfColumn);
 };
 
-#endif // COUNTEROFNEIGHBOURS_H
+#endif

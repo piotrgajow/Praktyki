@@ -28,7 +28,11 @@ SOURCES += \
     converter.cpp \
     systemcommand.cpp \
     filenamereader.cpp \
-    main.cpp
+    main.cpp \
+    readerfromtxtfile.cpp \
+    validator.cpp \
+    fillerwithvaluesfromtxtfile.cpp \
+    sizewithframe.cpp
 
 
 # The following define makes your compiler emit warnings if you use
@@ -55,7 +59,12 @@ HEADERS += Game.h \
     savetofilewithnameandtext.h \
     converter.h \
     systemcommand.h \
-    filenamereader.h
+    filenamereader.h \
+    readerfromtxtfile.h \
+    validator.h \
+    fillerwithvaluesfromtxtfile.h \
+    sizewithframe.h \
+    structurerowscolumns.h
 
 DISTFILES += \
     GameOfLife.pro.user \

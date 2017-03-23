@@ -8,26 +8,37 @@
 #include "checkbuttonpressed.h"
 #include "systemcommand.h"
 #include "savetofilewithnameandtext.h"
-#include "filenamereader.h"
-
+#include "readerfromtxtfile.h"
+#include "validator.h"
+#include "fillerwithvaluesfromtxtfile.h"
 #include <conio.h>
-
+#include "filenamereader.h"
 class Game
 {
 public:
-    Game();
-    
+    Game();    
+
 private:
     CheckButtonPressed newPressed;
-    FillerWithRandomValues filler;
+    FillerWithRandomValues fillerWithrandomValues;
     DisplayGameBoardOnTheCommandLine display;
     Converter converter;
     Generator generator;
     SystemCommand command;
     SaveToFileWithNameAndText saveToFile;
-    FilenameReader filenameReader;
+    ReaderFromTxtFile readerFromTxtFile;
+    Validator validator;
+    FillerWithValuesFromTxtFile fillerWithValuesFromTxtFile;
+    FilenameReader nameOfFile;
     void startInfiniteLoop();
     int counterOfIterations;
+    SizeWithFrame * sizeOfBoardPlusFrame;
+    Board * board;
+    void LoadBoardFromTxtFile();
+    void FillBoardIfValidated();
+    void generateRandomBoard();
+    void showOptions();
+    void displayCurrentBoard();
 };
 
 #endif

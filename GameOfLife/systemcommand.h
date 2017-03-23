@@ -6,6 +6,7 @@ class SystemCommand
 {
 private:
     bool loopStatus;
+
 public:
     SystemCommand();
     void waitAsLongAsDeclaredToGenerateTheNextBoard(float howManySecondToGenerateNextBoard);
@@ -15,4 +16,4 @@ public:
     void setLoopStatus(bool value);
 };
 
-#endif // SYSTEMCOMAND_H
+#endif

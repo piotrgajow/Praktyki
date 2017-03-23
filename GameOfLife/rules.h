@@ -9,4 +9,4 @@ public:
     bool applyRules(int,bool);
 };
 
-#endif // RULES_H
+#endif

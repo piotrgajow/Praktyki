@@ -4,13 +4,12 @@
 #include <vector>
 #include <ctime>
 #include <cstdlib>
-#include <iostream>
 
 class FillerWithRandomValues:public virtual Filler
 {
 public:
     FillerWithRandomValues();
-   void fillBoard( Board &board);
+    void fillBoard();
 };
 
-#endif // FILLERWITHRANDOMVALUES_H
+#endif

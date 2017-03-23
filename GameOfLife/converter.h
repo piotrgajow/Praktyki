@@ -6,14 +6,12 @@
 class Converter
 {
 public:
-
       std::string convertBoolBoardToString (std::vector<std::vector<bool>> theBoard);
       std::string getBoardConvertToString();
-
 private:
 
       char deadCell=' ', liveCell='X';
       std::string boardConvertToString;
 };
 
-#endif // CONVERTERBOOLBOARDTOSTRING_H
+#endif
