@@ -22,6 +22,7 @@ float CheckButtonPressed::getHowManySecondToGenerateNextBoard()
     return howManySecondToGenerateNextBoard;
 }
 
+#ifdef _WIN32
 void CheckButtonPressed::checkStatusOfButtonPressed()
 {
     if(GetAsyncKeyState(VK_ESCAPE))
@@ -47,6 +48,37 @@ void CheckButtonPressed::checkStatusOfButtonPressed()
     }
 }
 
+#elif __linux__
+
+void CheckButtonPressed::checkStatusOfButtonPressed()
+{
+    int key = getch();
+    if(key == 27)
+    {
+        exit(0);
+    }
+    else if(key == ' ')
+    {
+        loopStatus = !loopStatus;
+        usleep(100);
+    }
+    else if(key == '+')
+    {
+        howManySecondToGenerateNextBoard/=2;
+    }
+    else if(key == '-')
+    {
+        howManySecondToGenerateNextBoard*=2;
+    }
+    else if(key == 's')
+    {
+        saveToFileStatus = true;
+    }
+}
+
+#else
+
+#endif
 
 bool CheckButtonPressed::getStatusOfLoop()
 {
