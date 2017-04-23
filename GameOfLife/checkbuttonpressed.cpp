@@ -26,12 +26,12 @@ void CheckButtonPressed::checkStatusOfButtonPressed()
 {
     if(GetAsyncKeyState(VK_ESCAPE))
         {
-            exit(0);
+            //exit(0);
         }
     else if(GetAsyncKeyState(VK_SPACE))
     {
         loopStatus = !loopStatus;
-        Sleep(100);
+        //Sleep(100);
     }
     else if(GetAsyncKeyState(VK_ADD))
     {
